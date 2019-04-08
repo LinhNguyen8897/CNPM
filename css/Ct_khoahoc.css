@@ -1,0 +1,195 @@
+body{margin: 0; padding: 0; font-family: sans-serif;}
+
+/*home_page*/
+
+.unica-form {    font-size: 13px;   font-style: italic;    height: 40px;    width: 99% !important;}
+.unica-btn-search {position: absolute;right: 28px;top: 12px;background: transparent;color: #f26c4f;font-size: 20px;padding: 6px 20px;}
+.unica-search-boxtop { margin-top: 13px; }
+.col-sm-4.col-lg-5.col-md-5.cate-sm { margin-top: 9px}
+.unica-active-course { border: 1px solid #555; padding: 9px 10px; border-radius: 3px; display: inline-block; color: #555; margin-top: 13px; }
+.unica-active-course:hover { background: #f26c4f; color: #fff; border:1px solid #ccc; }
+.unica-active-course i {margin-right: 5px;}
+.unica-active-course p { display: inline; }
+button.btn.unica-btn-search {padding: 0px 12px;font-size: 18px;}
+.unica-cart { color: #999; margin-left: 15px; position: relative; }
+.unica-cart i { font-size: 24px; }
+.unica-sl-cart { font-size: 10px; border-radius: 25px; border: 1px solid #ccc;
+ position: absolute; top: -14px; left: 18px; padding: 1px 5px; }
+ 
+.unica-acc-zone {float: right;margin-top: -41px;}
+ .unica-acc-zone li { display: inline-table; }
+ .unica-reg-acc { border: 1px solid #555; padding: 9px 19px; border-radius: 3px; display: inline-block; color: #555 }
+.unica-log-acc { border: 1px solid #f26c4f; padding: 9px 10px;
+ border-radius: 3px; display: inline-block; color: #fff; background: #f26c4f; }
+ 
+ /*header*/
+.header ul li {display: inline-block;list-style: none;padding-top: 7px;}
+.header ul li.active a {color: blue;}
+.header ul li a { font-size: 22px;text-decoration: none;text-transform: uppercase;padding: 6px 12px;color: #403d3d;
+  font-family: lato_r;transition: 0.5s;}
+.header ul li:hover a {color: blue;transition: 0.5s;}
+.header ul {display: inline;}
+.header {width: 100%;background-color: #ecf0f1;height: 50px;text-align: center;}
+.header.bienhinh {top: 0;position: fixed;background: #ffffff;z-index: 44;transition: 0.5s;
+  transform: scale(1);box-shadow: 2px 7px 7px;}
+
+/************
+header
+*************/
+#header {background: #097890;color: #fff;padding-bottom: 10px;min-height: 212px;margin-top: -19px;}
+#header h1{font-weight: bold;font-size: 35px;padding-top: 31px;padding-left: 3em;font-family: sans-serif;}
+#header #header_text{margin: 10px 23px;font-size: 17px;font-family: sans-serif;padding-left: 5em;}
+#header #header_student {margin-top: 19px;margin-left: 5em;}
+#header #header_student ul li {list-style: none; display: inline-block;margin-right: 20px;}
+#header_student ul li span i{color:yellow }
+
+/*********
+video
+**********/
+.video {margin-top: 18px;}
+
+/*********
+title
+**********/
+#title {margin-top: 21px;border: 1px solid gray; height: 50px;
+    background: white; border-radius: 2px}
+#title ul li{list-style: none; display:inline-block; padding-top: 15px;}
+#title ul li a{text-decoration: none;padding: 42px 73px 0px 10px;color: black;}
+#title ul li:hover{background: gray; height: 50px;}
+
+/*********
+learn_what
+**********/
+#learn_what h3{font-size: 27px;font-weight: 500;padding-left: 22px;border-bottom: 1px solid #80808063;}
+#learn_what{margin-top: 21px;border: 1px solid gray;border-radius: 2px; background: white}
+#learn_what.title_icon{margin-top: 20px}
+#learn_what .title_icon .title{padding: 10px 22px;margin: 0 0 15px 0;}
+#content .title_icon .title i{color: #1da948}
+#content .title_icon .title i span {color: black; font-size: 14px}
+
+
+/*********
+des_course
+**********/
+#des_course{margin-top: 21px;border: 1px solid gray;border-radius: 2px; background: white}
+#des_course h3{font-size: 27px;font-weight: 500;padding-left: 22px;
+    border-bottom: 1px solid #80808063;}
+#des_course .des_course_text {margin-left: 23px;font-size: 15px;font-family: sans-serif;}
+
+
+/**********
+des_course panel_heading
+***********/
+#panel_heading {border: 1px solid gray;margin-top: 15px;width: 719px;margin-left: 14px;}
+#panel_heading .panel_title{ border-bottom: 1px solid gray; padding-bottom: 15px }
+#panel_heading .panel_title i.fas.fa-minus-square {margin-right: 2px;margin-left: 17px;}
+#panel_heading .panel_title a{text-decoration: none;color: black}
+.panel_collapse{border-bottom: 1px solid gray; height: 50px; margin-top: 10px}
+.panel_collapse .time{float: right;}
+.panel_collapse .link a{text-decoration: none;padding: 4px;background: aqua;text-align:
+ center;border-radius: 1px;}
+.panel_collapse .link {float: right;}
+.panel_collapse .title {margin-left: 14px;}
+.panel_collapse .title a {text-decoration: none;color: black;}
+.panel_collapse .title a i{margin-right: 2px}
+
+/************
+clearfix
+*************/
+#clearfix {margin-top: 10px;height: 150px;}
+#clearfix ul li{list-style: none; display: inline-block;margin-right: 20px; margin-top: 15px}
+#clearfix ul li a{
+	text-decoration: none;
+	padding: 15px 4px;
+	background: gray;
+	color: black;
+	display: inline-block;
+	}
+
+/********
+des_course
+*********/
+.u-combo-course ul li {list-style: none;margin-left: -36px;}
+#des_course .u-combo-course{padding: 0 15px}
+.u-combo-usua{ border-bottom: 1px solid #c8c8c8;  padding-bottom: 10px; 
+	display: inline-block; padding-top: 10px; width: 100%;}
+.u-combo-usua .img-combo{float: left;margin-right: 27px;margin-top: 3px;width: 30%;}
+.u-combo-usua .des-combo { display: inline-block; width: 50%}
+.u-combo-usua .des-combo a{ font-size: 16px; font-weight: bold; color: #545454;
+ margin-bottom: 20px; display: block; }
+.u-combo-usua .des-combo a{text-decoration: none;font-size: 16px;font-weight: bold;
+	color: #545454;margin-bottom: 20px;display: block;}
+.u-combo-usua .rate-combo { margin-top: 12px;  }
+.u-combo-usua .rate-combo p { float: left; margin-right: 15px; }
+.u-combo-usua .price-combo { display: inline-block; text-align: center; margin-top: -4px;
+ float: right; font-size: 24px; font-weight: bold;}
+
+/*********** 
+des_course uct-left
+************/
+#des_course .uct-left { width: 23%; text-align: center; float: left; }
+#des_course .uct-left .uct-ava-gv img { border-radius: 88px; border: 1px solid #d9d9d9;
+ width: 125px; height: 125px;}
+ #des_course .uct-left .uct-rate-gv ul li{list-style: none;line-height: 24px}
+ #des_course .uct-left .uct-rate-gv ul li  span{font-weight: bold;}
+/*********** 
+des_course uct-right
+************/
+#des_course .uct-right {     width: 73%;    float: left;    margin-left: 25px; }
+#des_course .uct-right .uct-name-gv { font-size: 16px; font-weight: bold;  }
+#des_course .uct-right .uct-des-gv { color: #727272; margin: 10px 0 20px 0; }
+
+/*********** 
+des_course.urh-left
+************/
+#des_course .urh-left { width: 21%; text-align: center; float: left; }
+#des_course .urh-left .number-big-rate { font-size: 72px; font-weight: bold; color: #333; }
+#des_course .urh-left .star-big-rate { display: inline-block;}
+#des_course .urh-left .star-big-rate .star-rate { float: left; margin-right: 5px; margin-top: 1px;}
+#des_course .urh-left .star-big-rate .star-rate i{color: #de501a;font-size: 20px;}
+#des_course .urh-left .count-rate { margin-top: 5px; }
+.uct-rate-gv {text-align: center;margin-right: 30px;}
+h4.panel_title {margin-left: 3px;}
+
+
+/*********** 
+des_course..urh-right
+************/
+
+
+#des_course .urh-right {     width: 73%;    float: left;    margin-left: 40px; }
+#des_course .urh-right .u-rate-f1 .u-rate-f1-progress { width: 70%; float: left; height: 30px; }
+#des_course .urh-right .u-rate-f1 .u-rate-f1-star { width: 21%;    float: left;    margin: 0 10px; }
+#des_course .urh-right .u-rate-f1-star .star-rate { float: left; margin-right: 5px;
+ margin-top: 1px;}
+#des_course .urh-right .u-rate-f1-num {    width: 5%;    float: left; }
+.u-rate-f1-num p { color: #000; font-size: 15px}
+.u-rate-f1-star .star-rate i {font-size: 20px;color: #ec391d;}
+
+.block-buy { border: 1px solid #d7d7d7; border-radius: 5px; background: #fff; padding: 20px 15px 5px 15px; top: -187px; position: relative;}
+.pdr-b { padding-left: 0; }
+.block-price {  width: 100%; }
+.b-price {  align-items: center; }
+.big-price { font-size: 32px; font-weight: bold; float: left; }
+.big-price sup { font-size: 16px; }
+.small-price { font-size: 20px; text-decoration: line-through; margin-left: 10px; display: inline-block; margin-top: 10px; }
+.small-price sup { font-size: 12px; }
+.discount-price { font-size: 14px; background: #f26c4f; padding: 5px; color: #fff; display: inline-block; float: right; margin-top: 10px; }
+.time-uudai {     text-align: left;    display: inline-block;    width: 100%; color: #04620f; font-weight: bold; margin: 10px 0; }
+.time-uudai i { margin-right: 10px;  }
+.btn-buy-course { background: #ff0000; border-radius: 5px; padding: 14px 20px; display: inline-block; width: 100%; color: #fff; font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 10px; text-transform: uppercase; }
+.btn-cart-course { background: #fff; border-radius: 5px; padding: 10px 20px; display: inline-block; width: 100%; color: #545454; font-size: 18px; font-weight: bold; text-align: center; border: 1px solid #b7b7b7; }
+.btn-cart-course i { font-size: 30px; margin-right: 10px; vertical-align: sub; }
+.block-btn p { color: #858585; font-size: 12px; margin: 10px 0; }
+.block-btn a:hover { opacity: .8; }
+.block-btn { text-align: center; }
+.block-ulti { color: #858585;}
+.block-ulti ul {margin-left: 5px;list-style:  none;}
+.u-sm-right .block-ulti ul li { line-height: 30px; text-decoration: none;}
+.block-ulti i { font-size: 18px;  text-align: center; width: 30px; margin-right: 5px; }
+.block-ulti p { font-weight: bold; display: inline; }
+.block-ulti a { color: #006aed; margin: 40px 0; display: inline-block; }
+.block-ulti a:hover { text-decoration: underline; }
+.block-share { text-align: center; border-top: 1px solid #ccc; padding-top: 10px; display: inline-block; width: 100%; }
+.cpgg-left { width: 68%; float: left; }
+.cpgg-right { width: 30%; float: right; }

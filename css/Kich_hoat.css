@@ -1,0 +1,97 @@
+body{margin: 0; padding: 0; font-family: sans-serif;}
+
+
+
+/*home_page*/
+
+.unica-form {    font-size: 13px;   font-style: italic;    height: 40px;    width: 99% !important;}
+.unica-btn-search {position: absolute;right: 28px;top: 12px;background: transparent;color: #f26c4f;font-size: 20px;padding: 6px 20px;}
+.unica-search-boxtop { margin-top: 13px; }
+.col-sm-4.col-lg-5.col-md-5.cate-sm { margin-top: 9px}
+.unica-active-course { border: 1px solid #555; padding: 9px 10px; border-radius: 3px; display: inline-block; color: #555; margin-top: 13px; }
+.unica-active-course:hover { background: #f26c4f; color: #fff; border:1px solid #ccc; }
+.unica-active-course i {margin-right: 5px;}
+.unica-active-course p { display: inline; }
+
+.unica-cart { color: #999; margin-left: 15px; position: relative; }
+.unica-cart i { font-size: 24px; }
+.unica-sl-cart { font-size: 10px; border-radius: 25px; border: 1px solid #ccc;
+ position: absolute; top: -14px; left: 18px; padding: 1px 5px; }
+ 
+.unica-acc-zone {float: right;margin-top: -41px;}
+ .unica-acc-zone li { display: inline-table; }
+ .unica-reg-acc { border: 1px solid #555; padding: 9px 19px; border-radius: 3px; display: inline-block; color: #555 }
+.unica-log-acc { border: 1px solid #f26c4f; padding: 9px 10px;
+ border-radius: 3px; display: inline-block; color: #fff; background: #f26c4f; }
+ 
+ /*header*/
+.header ul li {display: inline-block;list-style: none;padding-top: 7px;}
+.header ul li.active a {color: blue;}
+.header ul li a { font-size: 22px;text-decoration: none;text-transform: uppercase;padding: 6px 12px;color: #403d3d;
+  font-family: lato_r;transition: 0.5s;}
+.header ul li:hover a {color: blue;transition: 0.5s;}
+.header ul {display: inline;}
+.header {width: 100%;background-color: #ecf0f1;height: 50px;text-align: center;}
+.header.bienhinh {top: 0;position: fixed;background: #ffffff;z-index: 44;transition: 0.5s;
+  transform: scale(1);box-shadow: 2px 7px 7px;}
+
+  
+.u-box-cart-title { margin: 45px 10px 0; text-align: center;}
+.u-box-cart-title p { font-size: 16px; }
+.u-box-cart {text-align: center; padding: 20px; margin: 10px 0;}
+.u-box-cart .u-box-cart-title h1 {font-size: 32px; font-weight: bold;}
+.u-cart-txt { font-size: 20px;  }
+.u-icon-cart i { font-size: 120px; color: #ccc; }
+.btn-cart { background: #ec5252; padding: 10px 15px; font-weight: bold; color: #fff; display: inline-block; margin: 10px 0; border-radius: 3px; border: none;}
+.u-cart-course { display: flex; border-bottom: 1px solid #dedfe0; padding-bottom: 10px; padding-top: 10px;}
+.u-cart-course:last-child { border: 0; padding-bottom: 0; }
+.u-box-cart2 {  border: 1px solid #eee; padding: 10px; margin:  10px 0;  display: inline-block; width: 100%; position: relative; }
+.u-cart-combo-course { border: 1px solid #eee; padding: 10px; margin:  10px 0;  display: inline-block; width: 100%; position: relative; }
+.u-cart-combo-course .u-cart-course { border: none; }
+.u-cart-combo-course .remove-course { position: absolute; top: 9px; right: 12px; color: red; cursor: pointer;}
+.u-box-cart2 .label { position: absolute; top: 20px; border-radius: 0 8px 8px 0; }
+.u-box-cart-big { position: relative; border-bottom: 1px solid #eee;  padding-bottom: 10px; }
+.u-box-cart-big:last-child { border: 0; padding-bottom: 0; }
+.img-cart-course { margin-right: 10px; width: 10%; }
+.title-cart-course { text-align: left; width: 70%; }
+.title-cart-course p { font-weight: bold; }
+.u-box-cart2 .remove-course { cursor: pointer; width: 5%; font-size: 16px; color: #f00;position: relative;top: 3px; left: 17px}
+.price-cart { width: 30%; text-align: right}
+.price-cart p { font-size: 20px; font-weight: bold; }
+.price-cart sup { font-size: 14px; }
+.price-cart span { text-decoration: line-through;  }
+.price-cart span sup { font-size: 10px; }
+.u-cart-price { margin-top: 15px;  }
+.u-cart-price p { font-size: 18px; }
+.price-btn-box a { color: #fff; background: #ec5252; padding: 10px 20px; text-align: center; border-radius: 3px; font-weight: bold; display: inline-block; width: 100%;  text-transform: uppercase;}
+.cart-notice p { font-size: 14px; color: #7a8388; text-align: center;margin-top: 15px; }
+.price-cart-box { display: inline-block; width: 100%; margin: 0 0 10px 0;  }
+.price-cart-1 { color: #ec5252; font-size: 26px; font-weight: bold; }
+.price-cart-1 sup { font-size: 14px; }
+.price-cart-2 { margin: 5px 0; }
+.price-cart-2 p { font-size: 14px; display: inline-block; }
+.price-cart-2 sup { font-size: 12px; }
+.price-cart-2 span { text-decoration: line-through; }
+.price-cart-3 { font-size: 14px; }
+.price-cart-3 p { display: inline-block; font-size: 14px; }
+.more-cart { margin: 10px 0; text-align: center;}
+.more-cart p { font-size: 13px; }
+.more-cart a {color: #fff; background: #03A9F4; padding: 10px 20px; width: 30%; border-radius: 3px; font-weight: bold; display: inline-block; margin-top: 5px; }
+.u-box-cart-title2 { font-size: 18px; font-weight: bold; margin-top: 20px; }
+.u-cart-price2 { margin-top: 20px;  }
+.u-cart-price2 p { font-size: 16px; font-weight: bold; }
+.u-box-cart2 .form-inline .form-control { width: 100%; height: 40px; }
+span.required {    color: #F44336;}
+.u-box-cart2 label { float: left; font-weight: bold; margin-bottom: 5px; }
+.button-continue {    background-color: #f26c4f;    color: #fff;    font-size: 18px;    font-weight: 700; float: left; margin-top: 10px;}
+.u-c-title { border-bottom: 1px solid #e6e6e6; padding: 5px 0; display: inline-block; width: 100%; }
+.u-c-title p { font-size: 14px; float: left; }
+.u-c-title a { float: right; }
+.total-cart {margin-top: 10px; padding-top: 5px; width: 100%; display: inline-block; }
+.cart-course { display: inline-block; width: 100%; padding: 15px 0; }
+
+.ult-r sup { font-size: 10px; }
+.bd-cart-no { border: 0; }
+.name-cart-course { width: 70%; float: left; }
+.ult-l { float: left;margin-top: 5px;  }
+.ult-r { float: right; margin-top: 5px;  }

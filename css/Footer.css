@@ -1,0 +1,42 @@
+body{margin: 0; padding: 0}
+/************
+  footer
+*************/
+#footer2 {background: #2c3238;padding-bottom: 30px;}
+.logo-footer .navbar-brand { padding: 15px 0; }
+.sub-email  { padding-bottom: 5px; }
+.sub-email button:hover { color: #fff; }
+.mt-10 {    margin-top: 10px !important;}
+.font-16 { font-size: 16px; font-weight: normal; }
+.font-14 {    font-size: 14px !important;}
+.bg-theme-colored {    background-color: #202C45 !important;}
+.m-0 {    margin: 0px !important;}
+.btn-xs {    padding: 3px 14px; line-height: 1.5;    border-radius: 3px;}
+.navbar-brand { float: none; display: inline-block; }
+#footer2 p { margin-top: 10px; }
+#footer2 p, #footer2 a { color: #fff; }
+#footer2 i { color: #f26c4f; margin-right: 1px; }
+#footer2 ul {padding-left: 0;list-style: none;margin-top: 2px;}
+#footer2 ul li { line-height: 30px; }
+.social-connect ul li { float: left;}
+.social-connect { display: inline-block; }
+.social-connect p { font-weight: bold; font-size: 16px; margin-bottom: 20px; color: #f26c4f !important; }
+.social-connect i { color: unset !important; margin-right: 0 !important; line-height: 37px;}
+.social-connect a { color: #eeeeee; display: block; font-size: 18px; height: 36px; line-height: 36px; width: 36px; text-align: center; margin-right: 10px;}
+.des-unica h4, .app-unica h4 { font-size: 16px; color: #f26c4f; font-weight: bold; margin: 25px 0 13px 0; }
+.des-unica a:hover { color: #f26c4f !important; }
+#footer3 p { color: #fff; margin: 10px 0; }
+.app-unica ul li { margin-bottom: 20px; }
+.facebook-box { padding: 25px 0; text-align: center; }
+#mce-EMAIL-call { border-radius: 5px; font-size: 14px; }
+#exampleInputName2 { height: 45px; border-radius: 5px; }
+#footer1 > div > div > div:nth-child(2) > form > div.input-group.form-group > span > button{ margin-left: 10px !important; }
+.u-title-footer h3 {    vertical-align: middle;    text-transform: uppercase;    color: #fff;  font-size: 28px; font-weight: bold; margin-top: 7px;}
+/*-Tags-*/
+.u-tags ul li { display: inline; float: left; width: 18%; margin: 11px; }
+.u-tags-mini { background: #e4e4e4; border-radius: 5px; padding: 10px; display: block; color: #000; }
+.u-tags-mini:hover { background: #b6b6b6; color: #fff }
+.u-tags-mini i { float: left; width: 40px; text-align: center;  color: #f26c4f; font-size: 20px;}
+.u-tags-mini p { font-weight: bold; text-align: center; }
+a.nutback.hienra {opacity: 1;visibility: visible;}
+.copyright {text-align: center;font-size: 21px;width: 100%;background: #1f1d1d;color: gray;}

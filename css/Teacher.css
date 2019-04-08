@@ -1,0 +1,105 @@
+body{margin: 0; padding: 0}
+
+
+/*home_page*/
+
+.unica-form {    font-size: 13px;   font-style: italic;    height: 40px;    width: 99% !important;}
+.unica-btn-search {position: absolute;right: 28px;top: 12px;background: transparent;color: #f26c4f;font-size: 20px;padding: 6px 20px;}
+.unica-search-boxtop { margin-top: 13px; }
+.col-sm-4.col-lg-5.col-md-5.cate-sm { margin-top: 9px}
+.unica-active-course { border: 1px solid #555; padding: 9px 10px; border-radius: 3px; display: inline-block; color: #555; margin-top: 13px; }
+.unica-active-course:hover { background: #f26c4f; color: #fff; border:1px solid #ccc; }
+.unica-active-course i {margin-right: 5px;}
+.unica-active-course p { display: inline; }
+
+.unica-cart { color: #999; margin-left: 15px; position: relative; }
+.unica-cart i { font-size: 24px; }
+.unica-sl-cart { font-size: 10px; border-radius: 25px; border: 1px solid #ccc;
+ position: absolute; top: -14px; left: 18px; padding: 1px 5px; }
+ 
+.unica-acc-zone {float: right;margin-top: -41px;}
+ .unica-acc-zone li { display: inline-table; }
+ .unica-reg-acc { border: 1px solid #555; padding: 9px 19px; border-radius: 3px; display: inline-block; color: #555 }
+.unica-log-acc { border: 1px solid #f26c4f; padding: 9px 10px;
+ border-radius: 3px; display: inline-block; color: #fff; background: #f26c4f; }
+ 
+ /*header*/
+.header ul li {display: inline-block;list-style: none;padding-top: 7px;}
+.header ul li.active a {color: blue;}
+.header ul li a { font-size: 22px;text-decoration: none;text-transform: uppercase;padding: 6px 12px;color: #403d3d;
+  font-family: lato_r;transition: 0.5s;}
+.header ul li:hover a {color: blue;transition: 0.5s;}
+.header ul {display: inline;}
+.header {width: 100%;background-color: #ecf0f1;height: 50px;text-align: center;}
+.header.bienhinh {top: 0;position: fixed;background: #ffffff;z-index: 44;transition: 0.5s;
+  transform: scale(1);box-shadow: 2px 7px 7px;}
+
+
+/*************
+gd_banner
+*************/
+.container-fluid.gd_banner {padding: 0px;}
+.banner_gv {width: 100%; height: 341px; background-image: url(http://localhost:8081/hocphp/HTML/images/banner.jpg);
+    background-size: cover;position: relative;}
+img.anhgv {position: absolute;bottom: 5%;left: 8%;z-index: 1;width: 180px;
+    height: 180px;border-radius: 50%;}
+.tengv {font-size: 30px;bottom: 34%;position: absolute;left: 22%;
+    font-family: segoe ui light;font-weight: bold;color: white;}
+.chuyenmongv {position: absolute;bottom: 26%;left: 22%;font-size: 21px;color: white;
+    font-family: segoe ui light;font-weight: 500;}
+.nutfb { position: absolute;bottom: 11%;left: 22%;font-size: 14px;background-color: #ffffff00;
+    padding: 8px 30px;border: 1px solid white;color: white;transition: 0.5s;border-radius: 4px;}
+.nutnt {position: absolute; bottom: 11%; left: 34%; font-size: 14px; background-color: #ffffff00;
+    padding: 8px 30px;border: 1px solid white;color: white;transition: 0.5s; border-radius: 5px;}
+
+/**************.
+u-bread
+***************/
+.u-bread {background: #f6f6f6;}
+.unica-breadcrumb .breadcrumb { padding: 15px 0; margin-bottom: 0; }
+.unica-breadcrumb .breadcrumb .breadcrumb-item a{text-decoration: none;font-size: 17px;}
+
+
+/********************************
+		main u-teacher-box
+********************************/
+.u-teacher-intro { margin: 10px 0; }
+.u-teacher-intro h3 {font-size: 18px; font-weight: bold; margin-bottom: 10px;}
+.u-teacher-intro p { margin: 10px 0; text-align: justify; }
+.u-teacher-video { margin: 20px 0; }
+
+/********************************
+		main u-box-course
+********************************/
+
+.u-box-course .u-box-course-teacher { margin: 15px 0 20px 0; }
+.u-box-course .u-box-course-teacher h2 {font-size: 23px;font-weight: bold;}
+.ubc-course { border: 1px solid #e0e0e0; background: #fff; padding: 10px 10px 5px 10px; border-radius: 3px;
+ display: inline-block; width: 100%; margin-bottom: 10px; }
+.img-ubc-course { width: 30%; float: left; }
+.des-ubc-course { width: 47%; float: left; margin-left: 20px; }
+.des-ubc-course p { font-size: 16px; font-weight: bold; margin-bottom: 10px }
+.mini-des { display: inline-block; margin-bottom: 10px; list-style: none;}
+.mini-des li {float: left;margin-right: 38px;}
+.big-des{list-style: none;}
+.big-des i { color: #0090ff; }
+.big-des li { line-height: 25px; }
+
+.lp-bc-price {text-align: right;  font-weight: bold;width: 20%; float: right;}
+.lp-bc-price .price-b {font-size: 34px;text-decoration: none;padding-right: 3em;}
+.lp-bc-price .price-b sup {    font-size: 20px;}
+.lp-bc-price .price-s {    font-size: 24px;    color: #696969;    text-decoration: line-through;}
+.lp-bc-price .price-s sup {    font-size: 12px;}
+.lp-bc-price .price-o {    font-size: 14px;    background: #f26522;    border-radius: 3px;
+    padding: 5px;    color: #fff;    display: inline-block;    margin: 10px 0;}
+.lp-bc-price a {
+ background: #d85656;
+ padding: 10px 20px;
+ text-transform: uppercase;
+ font-size: 16px;
+ margin-top: 18px;
+ display: block;
+ text-align: center;
+ color: white;
+ text-decoration: none;
+ }

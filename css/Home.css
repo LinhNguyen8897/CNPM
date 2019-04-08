@@ -1,0 +1,140 @@
+body{margin: 0; padding: 0}
+a{text-decoration: none;}
+
+/*home_page*/
+
+.unica-form {    font-size: 13px;   font-style: italic;    height: 40px;    width: 99% !important;}
+.unica-btn-search {position: absolute;right: 28px;top: 12px;background: transparent;color: #f26c4f;font-size: 20px;padding: 6px 20px;}
+.unica-search-boxtop { margin-top: 13px; }
+.col-sm-4.col-lg-5.col-md-5.cate-sm {margin-top: 8px;}
+button.btn.unica-btn-search {padding: 0px 12px;font-size: 18px;}
+.unica-active-course { border: 1px solid #555; padding: 9px 10px; border-radius: 3px; display: inline-block; color: #555; margin-top: 13px; }
+.unica-active-course:hover { background: #f26c4f; color: #fff; border:1px solid #ccc; }
+.unica-active-course i {margin-right: 5px;}
+.unica-active-course p { display: inline; }
+
+.unica-cart { color: #999; margin-left: 15px; position: relative; }
+.unica-cart i { font-size: 24px; }
+.unica-sl-cart { font-size: 10px; border-radius: 25px; border: 1px solid #ccc;
+ position: absolute; top: -14px; left: 18px; padding: 1px 5px; }
+ 
+.unica-acc-zone {float: right;margin-top: -41px;}
+ .unica-acc-zone li { display: inline-table; }
+ .unica-reg-acc { border: 1px solid #555; padding: 9px 19px; border-radius: 3px; display: inline-block; color: #555 }
+.unica-log-acc { border: 1px solid #f26c4f; padding: 9px 10px;
+ border-radius: 3px; display: inline-block; color: #fff; background: #f26c4f; }
+ 
+ /*header*/
+.header ul li {display: inline-block;list-style: none;padding-top: 7px;}
+.header ul li.active a {color: blue;}
+.header ul li a { font-size: 22px;text-decoration: none;text-transform: uppercase;padding: 6px 12px;color: #403d3d;
+	font-family: lato_r;transition: 0.5s;}
+.header ul li:hover a {color: blue;transition: 0.5s;}
+.header ul {display: inline;}
+.header {width: 100%;background-color: #ecf0f1;height: 50px;text-align: center;}
+.header.bienhinh {top: 0;position: fixed;background: #ffffff;z-index: 44;transition: 0.5s;
+	transform: scale(1);box-shadow: 2px 7px 7px;}
+
+/*home*/
+.khoihome a.layer4 {font-size: 30px;display: inline-block;position: absolute;top: 71%;right: 24%;z-index: 4;background-color: #34495e;color: white;padding: 4px 10px;border-radius: 5px;text-decoration: none;font-family: lato_r;transition: 0.5s;}
+.khoihome a.layer4:hover {background-color: white;border: 1px solid black;color: black;}
+.khoihome ul li {display: inline-block;list-style: none;z-index: 3;width: 100px;height: 0px;font-family: lato_r;font-size: 16px;}
+.khoihome ul.layer3 {display: inline;position: absolute;right: 12%;top: 62%;z-index: 3;}
+ul.layer3 i.fa { margin-right: 30px;}
+.khoihome h1.layer2 {position: absolute;top: 50%;right: 15%;z-index: 2;font-size: 57px;font-family: lato_r;line-height: 24px;margin: 0;}
+.khoihome img.layer1 {position: absolute;top: 0;left: 0;z-index: 1;width: 100%;height: 600px;}
+div#so1 {position: relative;width: 100%;height: 600px;overflow: hidden;box-shadow: 2px 4px 3px;}
+
+.tong_khoi_gt {display: flex;flex-wrap: wrap;justify-content: space-between;}
+.khoigt .khoi_gt:nth-child(4n+4) {margin-right: 0;}
+.khoi_gt .nd_khoi {position: absolute;top: 40%;left: 0;z-index: 3;width: 100%;text-align: center;color: black;font-family: lato_r;font-size: 30px;
+text-transform: uppercase;opacity: 0;transition: 0.5s;transform: scale(0.5);}
+.khoi_gt:hover .nd_khoi {opacity: 1;transform: scale(1);}
+div#so2 {width: 100%;height: 300px;padding-top: 20px;overflow: hidden;}
+.khoi_gt .nenkhoi {width: 100%;height: 200px;background-color: #f7f3f3;position: absolute;top: 0;left: 0;z-index: 2;
+	opacity: 0;transform: scale(1);transition: 0.5s;}
+.khoi_gt:hover .nenkhoi {opacity: 1;transform: scale(0.9);}
+.khoi_gt img {width: 100%;height: 250px;position: absolute;top: 0;left: 0;
+z-index: 1;}
+.khoigt .khoi_gt {position: relative;width: 24%;height: 200px;float: left;margin-right: 1%;}
+.khoigt h1.td_khoigt {text-align: center;font-family: lato_r;text-transform: uppercase;color: gray;margin: 0;padding-top: 20px;
+margin-bottom: 20px;}
+
+
+.khoiquangcao {width: 100%;height: 360px;overflow: hidden;background-image: url(../images/qc.png);margin-top: 50px;
+background-size: cover;background-repeat: no-repeat;}
+
+h1.td_quyenloi {text-align: center;padding: 50px 0px;
+font-family: lato_r;text-transform: uppercase;margin: 0;color: gray;}
+.khoiquyenloi .khoi_ql .card {float: left;padding: 2px 66px;}
+.card-deck.khoi_ql {width: 100%;}
+p.card-text {text-align: center;font-size: 13px;font-family: lato_r;}
+h4.card-title {text-align: center;font-family: lato_bl;font-size: 11px;color: #1c931c;text-transform: uppercase;}
+
+.danhmuc ul li a {font-size: 14px;padding: 10px 20px;display: inline-block;background-color: #487eb0;color: white;
+text-decoration: none;transition: 0.5s;border: 1px solid white;}
+.danhmuc ul li {display: inline-block;font-family: lato_r;text-transform: uppercase;}
+.danhmuc ul li:hover a {border: 1px solid gray;background-color: white;color: black;}
+.danhmuc ul {display: inline;}
+.danhmuc {text-align: center;padding-top: 50px;padding-bottom: 50px;}
+
+
+/*khoa hoc*/
+h1.td_sp {text-align: center;color: red;}
+.sanpham {position: relative;height: 500px;}
+.sanpham .khoi_sp {position: absolute;top: 0;left: 0;width: 30%;height: 250px;visibility: visible;overflow: hidden;  }
+.sanpham .khoi_sp img.anh_sp {position: absolute;top: 50%;left: 50%;display: block;width: 100%;height: auto;
+	transform: translate(-50%,-50%);z-index: 1;}
+.nen-sp {position: absolute;top: 0;left: 0;z-index: 2;background: #21161600;width: 100%;height: 250px;opacity: 0;
+transition: 0.5s;
+overflow: hidden;}
+.khoi_ic {opacity: 0;display: inline-block;position: absolute;top: 10px;right: 10px;z-index: 3;width: 32px;height: auto;border-radius: 2px;
+	box-shadow: inset 0 0 0 100px #fff;color: #4a4a4a;font-size: 14px;font-weight: 500;line-height: 32px;cursor: pointer;
+	background: #a24b4b38;}}
+
+.khoi_sp:hover .nen_sp {opacity: 1;}
+
+/*dang ky thÃ nh giang vien*/
+div#so4 {padding-top: 50px;}
+.khoigiangvien .banner {width: 100%;height: 400px;background-image: url(../images/gv.jpg);position: relative;background-size: cover;
+overflow: hidden;}
+.banner .h3.td_banner {position: absolute;top: 32%;right: 2%;z-index: 1;font-size: 40px;
+text-align: center;color: white;text-transform: uppercase;font-family: lato_r;}
+.banner a.nutdk {position: absolute;top: 65%;right: 16%;z-index: 2;font-size: 40px;
+color: black;font-family: lato_r;text-transform: uppercase;display: inline-block;background-color: white;padding: 4px 14px;
+border-radius: 7px;text-decoration: none;transition: 0.5s;border: 1px solid white;}
+a.nutdk:hover {border: 1px solid #454343;color: #3d3dc0;}
+
+/*giang vien*/
+.khoigiangvien { background: #f1f1f1; padding: 0 }
+.u-top-teacher h4 {text-align: center;font-weight: bold;font-size: 30px;margin-bottom: 20px;text-transform: uppercase;color: gray;}
+.slick-slider{margin-bottom: 20px}
+.box-teacher > button.slick-prev.slick-arrow { left: -15px; }
+.box-teacher > button.slick-next.slick-arrow { right: -15px; }
+.box-teacher .slick-prev:before,.box-teacher .slick-next:before { color: #3c3c3c; }
+.slick-list{overflow: hidden;margin: 0;padding: 0;position: relative;display: block;}
+.slick-track{top: 0;}
+.slick-initialized .slick-slide {  display: block;}
+.slick-slide {display: none;float: left;height: 100%;min-height: 1px;}
+.inner-box-teacher {border-radius: 0px;text-align: center;margin: 8px;background: #fff;}
+.img-teacher { margin-top: 20px; }
+.img-teacher img{ border: 1px solid #f1f1f1; border-radius: 88px;  box-shadow: 1px 1px 1px #ccc; display: inline-block !important; }
+.name-teacher { margin: 20px 0; font-size: 20px; font-weight: bold;  color: #000; display: block;}
+.name-teacher:hover { color: #f26c4f; }
+.des-teacher { min-height: 57px; padding: 0 5px;     margin: 20px 5px;}
+.box-teacher > button.slick-prev.slick-arrow {left: -15px;}
+.slick-prev{z-index: 2;font-size: 0; line-height: 0;top: 50%;width: 20px;height: 20px;
+transform: translate(0,-50%);cursor: pointer;  border: none;position: absolute;display: block; padding: 0}
+.box-teacher > button.slick-next.slick-arrow {   right: -15px;}
+.slick-next{font-size: 0; line-height: 0; top: 50%; width: 20px; height: 20px;    transform: translate(0,-50%);
+    cursor: pointer; border: none;position: absolute; display: block;padding: 0;color: transparent;
+    background: 0 0;outline: 0;}
+/* thanh footer*/
+a.nutdk.dk {color: white;font-size: 20px;background-color: red;padding: 8px 10px;font-family: lato_r;
+border-radius: 7px;margin-top: 6px;display: inline-block;transition: 0.5s;border: 1px solid white;text-decoration: none;
+text-transform: uppercase;}
+.thanhfooter a.nutdk.dk:hover {background-color: white;color: black;border: 1px solid gray;}
+.thanhfooter ul li {display: inline-block;padding: 9px 10px;}
+img.anhnho {width: 45px;height: 45px;border-radius: 50%;}
+.thanhfooter {width: 100%;height: 60px;background-image: url(../images/bg.png);
+background-repeat: repeat;text-align: center;}

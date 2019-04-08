@@ -1,0 +1,62 @@
+body{margin: 0; padding: 0; font-family: sans-serif;background: white}
+a{text-decoration: none;}
+
+
+/*home_page*/
+
+.unica-form {    font-size: 13px;   font-style: italic;    height: 40px;    width: 99% !important;}
+.unica-btn-search {position: absolute;right: 28px;top: 12px;background: transparent;color: #f26c4f;font-size: 20px;padding: 6px 20px;}
+.unica-search-boxtop { margin-top: 13px; }
+.col-sm-4.col-lg-5.col-md-5.cate-sm { margin-top: 9px}
+.unica-active-course { border: 1px solid #555; padding: 9px 10px; border-radius: 3px; display: inline-block; color: #555; margin-top: 13px; }
+.unica-active-course:hover { background: #f26c4f; color: #fff; border:1px solid #ccc; }
+.unica-active-course i {margin-right: 5px;}
+.unica-active-course p { display: inline; }
+
+.unica-cart { color: #999; margin-left: 15px; position: relative; }
+.unica-cart i { font-size: 24px; }
+.unica-sl-cart { font-size: 10px; border-radius: 25px; border: 1px solid #ccc;
+ position: absolute; top: -14px; left: 18px; padding: 1px 5px; }
+ 
+.unica-acc-zone {float: right;margin-top: -41px;}
+ .unica-acc-zone li { display: inline-table; }
+ .unica-reg-acc { border: 1px solid #555; padding: 9px 19px; border-radius: 3px; display: inline-block; color: #555 }
+.unica-log-acc { border: 1px solid #f26c4f; padding: 9px 10px;
+ border-radius: 3px; display: inline-block; color: #fff; background: #f26c4f; }
+ 
+ /*header*/
+.header ul li {display: inline-block;list-style: none;padding-top: 7px;}
+.header ul li.active a {color: blue;}
+.header ul li a { font-size: 22px;text-decoration: none;text-transform: uppercase;padding: 6px 12px;color: #403d3d;
+  font-family: lato_r;transition: 0.5s;}
+.header ul li:hover a {color: blue;transition: 0.5s;}
+.header ul {display: inline;}
+.header {width: 100%;background-color: #ecf0f1;height: 50px;text-align: center;}
+.header.bienhinh {top: 0;position: fixed;background: #ffffff;z-index: 44;transition: 0.5s;
+  transform: scale(1);box-shadow: 2px 7px 7px;}
+/*****************
+main_column
+******************/
+
+#main_column{margin-bottom: 15px}
+.page_subheading {border-bottom: solid 1px #6b6c66;padding-bottom: 5px; margin-bottom: 20px;}
+.news_header h2, .news_header h3 {margin: 0px; font-size: 16px font-weight: 600;line-height: 25px;
+	text-transform: uppercase; color: #21201e;}
+.post-title {color: #21201e;font-size: 18px;font-weight: 600; line-height: 18px;margin: 0 0 10px;}
+.post-title a {color: #00abee;}
+
+.frm-contact {position: relative;text-align: left;font-size: 1em;margin: 10px 0 0;}
+.frm-contact p{color: #6d6e72;font: normal 1em/1.2em 'Open Sans', sans-serif, Myriad Pro, Arial;
+text-decoration: none;padding:  0 0 .5em;}
+.frm-contact ul{text-align: left;list-style: none;margin: 0;padding: 0;}
+.frm-contact ul li{margin: 0 0 .3em;}
+.frm-contact .label{font: normal 13px/20px 'Open Sans', sans-serif, Myriad Pro, Arial;background: none;text-align: left;padding: 0 0 .2em;
+ text-transform: none; display: block;color: #474747;}
+.frm-contact input, .frm-contact area{font: normal 13px/20px 'Open Sans', sans-serif, Myriad Pro, Arial;
+    text-transform: none;color: #474747;}
+.frm-contact .input-large{width: 100%;height: 30px;border: solid 1px #ddd;background: transparent;}
+.frm-contact .area-xlarge{height: 144px;border: solid 1px #ddd;background: transparent;
+	width: 100%;}
+.bgr-button {color: #fff !important;background: #00abee;float: left;font: bold 13px/24px 'Open Sans', sans-serif, Myriad Pro, Arial;
+    text-decoration: none;text-align: center;width: 75px;margin-right: .8em;padding: 0 12px;
+    height: 24px;border: none !important;}    

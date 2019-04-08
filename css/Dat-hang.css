@@ -1,0 +1,132 @@
+body{margin: 0; padding: 0; background-color: white;}
+a{text-decoration: none;}
+
+/*home_page*/
+
+.unica-form {    font-size: 13px;   font-style: italic;    height: 40px;    width: 99% !important;}
+.unica-btn-search {position: absolute;right: 28px;top: 12px;background: transparent;color: #f26c4f;font-size: 20px;padding: 6px 20px;}
+.unica-search-boxtop { margin-top: 13px; }
+.col-sm-4.col-lg-5.col-md-5.cate-sm { margin-top: 9px}
+.unica-active-course { border: 1px solid #555; padding: 9px 10px; border-radius: 3px; display: inline-block; color: #555; margin-top: 13px; }
+.unica-active-course:hover { background: #f26c4f; color: #fff; border:1px solid #ccc; }
+.unica-active-course i {margin-right: 5px;}
+.unica-active-course p { display: inline; }
+
+.unica-cart { color: #999; margin-left: 15px; position: relative; }
+.unica-cart i { font-size: 24px; }
+.unica-sl-cart { font-size: 10px; border-radius: 25px; border: 1px solid #ccc;
+ position: absolute; top: -14px; left: 18px; padding: 1px 5px; }
+ 
+.unica-acc-zone {float: right;margin-top: -41px;}
+ .unica-acc-zone li { display: inline-table; }
+ .unica-reg-acc { border: 1px solid #555; padding: 9px 19px; border-radius: 3px; display: inline-block; color: #555 }
+.unica-log-acc { border: 1px solid #f26c4f; padding: 9px 10px;
+ border-radius: 3px; display: inline-block; color: #fff; background: #f26c4f; }
+ 
+ /*header*/
+.header ul li {display: inline-block;list-style: none;padding-top: 7px;}
+.header ul li.active a {color: blue;}
+.header ul li a { font-size: 22px;text-decoration: none;text-transform: uppercase;padding: 6px 12px;color: #403d3d;
+  font-family: lato_r;transition: 0.5s;}
+.header ul li:hover a {color: blue;transition: 0.5s;}
+.header ul {display: inline;}
+.header {width: 100%;background-color: #ecf0f1;height: 50px;text-align: center;}
+.header.bienhinh {top: 0;position: fixed;background: #ffffff;z-index: 44;transition: 0.5s;
+  transform: scale(1);box-shadow: 2px 7px 7px;}
+
+
+.step {padding: .4em;background-image: linear-gradient(to bottom, #9de2d5,#bfdbde9e);margin: auto;
+    height: 80px;}
+li.link-item {list-style: none;display: inline-block;padding: 0 6em;}
+h3.title {border-radius: 50%;width: 40px;height: 40px;margin: auto;background-image: linear-gradient(to bottom,#a6aab3,#6b6969);
+  color: white; position: relative;line-height: 40px;}
+h3.title.active { background-image: linear-gradient(to bottom,#8bbbec 10%,#73a2d2 40%,#106c98 100%);}
+h3.title.active:before {content: "";background: #6969e0;}
+h3.title:before {content: "";position: absolute;top: 50%;left: 40px;width: 240px;height: 4px;
+    margin-bottom: 2px;background: gray;}
+h3.a.title:before {content: "";width: 0px;}
+
+/*******************
+PHAN BLOCK THỨ 1
+*******************/
+.block1 {overflow: hidden;width: 1170px;position: absolute;left: 150%;margin-left: -585px;
+    opacity: 0;visibility: hidden;transition: 0.5s;}
+.block1.show {opacity: 1;visibility: visible;left: 50%;}
+a.btn {display: inline-block;position: absolute;z-index: 3;}
+a.btn.next{bottom: 0%; right: 30%}
+a.btn.prev{  bottom: 0%; left:30%;}
+main#wrapper {padding: 1em calc(50% - 585px);height: 500px;position: relative;
+    overflow: hidden;background: white;}
+
+/*******************
+PHAN BLOCK THỨ 2
+*******************/
+.u-box-cart-title2 { font-size: 18px; font-weight: bold; margin-top: 20px;line-height: 10px }
+.u-box-cart-title2 span {font-size: 14px;font-weight: normal;line-height: 28px;}
+.form-group {margin-bottom: 15px;}
+.form-control {display: block;width: 100%;height: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;
+  color: #555555;background-color: #ffffff;background-image: none;border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;}
+.form-control:focus {border-color: #66afe9;outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);}
+ .form-control::-moz-placeholder {color: #999999;opacity: 1;}
+.form-control:-ms-input-placeholder { color: #999999;}
+.form-control::-webkit-input-placeholder {color: #999999;}
+a.btn-success.btn-cl-or {padding: 10px;border-radius: 2px;}
+ul.list-group { overflow: scroll; height: 200px;}
+button.btn.btn-success.btn-cl-or {  margin-top: -54px;}
+
+
+/*******************
+PHAN BLOCK THỨ 3
+*******************/
+.cart-complete { margin: 20px 0;font-size: 16px; line-height: 30px;padding: 20px;}
+.cart-complete span { padding-left: 6.5em;}
+.cart-complete i {font-size: 81px;padding-left: 2.5em;color: #00b609;}
+.cart-complete p {font-size: 20px;font-weight: bold;margin: 20px 0;padding-left: 5.5em;}
+
+/************
+  footer
+*************/
+#footer2 {background: #2c3238;padding-bottom: 30px;}
+.logo-footer .navbar-brand { padding: 15px 0; }
+.sub-email  { padding-bottom: 5px; }
+.sub-email button:hover { color: #fff; }
+.mt-10 {    margin-top: 10px !important;}
+.font-16 { font-size: 16px; font-weight: normal; }
+.font-14 {    font-size: 14px !important;}
+.bg-theme-colored {    background-color: #202C45 !important;}
+.m-0 {    margin: 0px !important;}
+.btn-xs {    padding: 3px 14px; line-height: 1.5;    border-radius: 3px;}
+.navbar-brand { float: none; display: inline-block; }
+#footer2 p { margin-top: 10px; }
+#footer2 p, #footer2 a { color: #fff; }
+#footer2 i { color: #f26c4f; margin-right: 1px; }
+#footer2 ul {padding-left: 0;list-style: none;margin-top: 2px;}
+#footer2 ul li { line-height: 30px; }
+.social-connect ul li { float: left;}
+.social-connect { display: inline-block; }
+.social-connect p { font-weight: bold; font-size: 16px; margin-bottom: 20px; color: #f26c4f !important; }
+.social-connect i { color: unset !important; margin-right: 0 !important; line-height: 37px;}
+.social-connect a { color: #eeeeee; display: block; font-size: 18px; height: 36px; line-height: 36px; width: 36px; text-align: center; margin-right: 10px;}
+.des-unica h4, .app-unica h4 { font-size: 16px; color: #f26c4f; font-weight: bold; margin: 25px 0 13px 0; }
+.des-unica a:hover { color: #f26c4f !important; }
+#footer3 p { color: #fff; margin: 10px 0; }
+.app-unica ul li { margin-bottom: 20px; }
+.facebook-box { padding: 25px 0; text-align: center; }
+#mce-EMAIL-call { border-radius: 5px; font-size: 14px; }
+#exampleInputName2 { height: 45px; border-radius: 5px; }
+#footer1 > div > div > div:nth-child(2) > form > div.input-group.form-group > span > button{ margin-left: 10px !important; }
+.u-title-footer h3 {    vertical-align: middle;    text-transform: uppercase;    color: #fff;  font-size: 28px; font-weight: bold; margin-top: 7px;}
+/*-Tags-*/
+.u-tags ul li { display: inline; float: left; width: 18%; margin: 11px; }
+.u-tags-mini { background: #e4e4e4; border-radius: 5px; padding: 10px; display: block; color: #000; }
+.u-tags-mini:hover { background: #b6b6b6; color: #fff }
+.u-tags-mini i { float: left; width: 40px; text-align: center;  color: #f26c4f; font-size: 20px;}
+.u-tags-mini p { font-weight: bold; text-align: center; }

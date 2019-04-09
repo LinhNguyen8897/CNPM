@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded",function(){
 		x[current].classList.add('active');
 		page[current].classList.add('show');
 		}
-		console.log(current);
+		// console.log(current);
 		(current==sumx-1)?next.innerHTML="Done":next.innerHTML="Next";
 		(current>0 && current<=sumx-1)?prev.style.opacity=1:prev.style.opacity=0;
 	}

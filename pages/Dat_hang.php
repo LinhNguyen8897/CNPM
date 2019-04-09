@@ -6,16 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trang chủ hệ thống</title>
     <script type="text/javascript" src="../js/3.js"></script>
-   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="../css/Dat-hang.css">
-    <script type="text/javascript" src="../js/jquery.js"></script>
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 </head>
 
 <body>
-    <?php
-    require 'Header.php';
-    ?>
+  <?php
+require 'Header.php';
+?>
 <!-- ---------------
     u-bread-cart 
 ------------------->
@@ -119,7 +118,7 @@
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                              <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed" style="text-decoration: none;">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#" class="collapsed" style="text-decoration: none;">
                                                 <i class="fa fa-home fh" aria-hidden="true"></i>Thu tiền tại nhà
                                                 </a>
                                              </h4>
@@ -141,7 +140,7 @@
                                     <div class="panel panel-default" pay-type="atm_panel">
                                           <div class="panel-heading">
                                              <h4 class="panel-title">
-                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed" style="text-decoration: none;">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#" class="collapsed" style="text-decoration: none;">
                                                 <i class="fa fa-credit-card-alt" aria-hidden="true"></i> Thẻ ATM, Internet Banking
                                                 </a>
                                              </h4>
@@ -149,9 +148,8 @@
                                           <div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
                                              <div class="panel-body">
                                                 Bạn cần có tài khoản Internet Banking để tiến hành thanh toán
-                                                <br> Hỗ trợ tất cả các ngân hàng tại Việt Nam: VCB, ACB, Sacombank, BIDV,...
-                                                <br>
-                                                <br>
+                                                 Hỗ trợ tất cả các ngân hàng tại Việt Nam: VCB, ACB, Sacombank, BIDV,...
+                                              
                                                 <a class=" btn-success btn-cl-or" href="/payonline/476529/atm"><span class="icon thenganhang"></span> Thanh toán ngay</a>
                                              </div>
                                           </div>
@@ -270,7 +268,7 @@
     footer 
 ---------------->
  <?php
-require 'Footer.php';
+require 'footer.php';
 ?>
 </body>
 </html>

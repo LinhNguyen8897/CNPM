@@ -1,6 +1,7 @@
 body{margin: 0; padding: 0; background-color: white;}
 a{text-decoration: none;}
 
+
 /*home_page*/
 
 .unica-form {    font-size: 13px;   font-style: italic;    height: 40px;    width: 99% !important;}
@@ -33,6 +34,7 @@ a{text-decoration: none;}
 .header {width: 100%;background-color: #ecf0f1;height: 50px;text-align: center;}
 .header.bienhinh {top: 0;position: fixed;background: #ffffff;z-index: 44;transition: 0.5s;
   transform: scale(1);box-shadow: 2px 7px 7px;}
+
 
 
 .step {padding: .4em;background-image: linear-gradient(to bottom, #9de2d5,#bfdbde9e);margin: auto;

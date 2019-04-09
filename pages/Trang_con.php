@@ -34,8 +34,213 @@
             <div class="row">
                 <div class="col-sm-9" style="margin-top: 15px">
                     <h4 style="font-size: 20px; font-family: sans-serif;margin-bottom: 13px; ">  Tổng hợp khóa học : Ngoại Ngữ</h4>
-                     <a href="chitietkhoahoc.php" style="border-radius: 1px"></a>
-            	</div>
+                      <div class="sanpham">
+                             <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                                  <img src="../images/kn3.jpeg" class="anh_sp">
+                                  <div class="nen-sp">
+                                      
+                                  </div><!-- nen-sp -->
+                                  <div class="khoi_ic">
+                                      <ul>
+                                          <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                                          <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                                          <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                                      </ul>
+                                  </div><!-- khoi_ic -->
+                                  <div class="content-course">
+                                      <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                                      <div class="content-gv">
+                                          <img src="../images/gv1.jpg" class="img-gv">
+                                          <span class="ten-gv">Hồ Văn Cương</span>
+                                      </div>
+                                      <div class="evaluate">
+                                          <span class="rate-course">
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                          </span>
+                                          <span class="n-rate">(250)</span>
+                                      </div>
+                                      <div class="price">
+                                          <del class="sale-price">$300.000 đ</del>
+                                          <span class="price-sale">250.000đ</span>
+                                      </div>
+                                  </div>
+                             </div><!-- khoi_sp --> 
+                             <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                                  <img src="../images/kn3.jpeg" class="anh_sp">
+                                  <div class="nen-sp">
+                                      
+                                  </div><!-- nen-sp -->
+                                  <div class="khoi_ic">
+                                      <ul>
+                                          <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                                          <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                                          <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                                      </ul>
+                                  </div><!-- khoi_ic -->
+                                  <div class="content-course">
+                                      <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                                      <div class="content-gv">
+                                          <img src="../images/gv1.jpg" class="img-gv">
+                                          <span class="ten-gv">Hồ Văn Cương</span>
+                                      </div>
+                                      <div class="evaluate">
+                                          <span class="rate-course">
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                          </span>
+                                          <span class="n-rate">(250)</span>
+                                      </div>
+                                      <div class="price">
+                                          <del class="sale-price">$300.000 đ</del>
+                                          <span class="price-sale">250.000đ</span>
+                                      </div>
+                                  </div>
+                             </div><!-- khoi_sp -->   
+                             <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                                  <img src="../images/kn3.jpeg" class="anh_sp">
+                                  <div class="nen-sp">
+                                      
+                                  </div><!-- nen-sp -->
+                                  <div class="khoi_ic">
+                                      <ul>
+                                          <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                                          <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                                          <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                                      </ul>
+                                  </div><!-- khoi_ic -->
+                                  <div class="content-course">
+                                      <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                                      <div class="content-gv">
+                                          <img src="../images/gv1.jpg" class="img-gv">
+                                          <span class="ten-gv">Hồ Văn Cương</span>
+                                      </div>
+                                      <div class="evaluate">
+                                          <span class="rate-course">
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                          </span>
+                                          <span class="n-rate">(250)</span>
+                                      </div>
+                                      <div class="price">
+                                          <del class="sale-price">$300.000 đ</del>
+                                          <span class="price-sale">250.000đ</span>
+                                      </div>
+                                  </div>
+                             </div><!-- khoi_sp -->
+                             <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                                  <img src="../images/kn3.jpeg" class="anh_sp">
+                                  <div class="nen-sp">
+                                      
+                                  </div><!-- nen-sp -->
+                                  <div class="khoi_ic">
+                                      <ul>
+                                          <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                                          <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                                          <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                                      </ul>
+                                  </div><!-- khoi_ic -->
+                                  <div class="content-course">
+                                      <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                                      <div class="content-gv">
+                                          <img src="../images/gv1.jpg" class="img-gv">
+                                          <span class="ten-gv">Hồ Văn Cương</span>
+                                      </div>
+                                      <div class="evaluate">
+                                          <span class="rate-course">
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                          </span>
+                                          <span class="n-rate">(250)</span>
+                                      </div>
+                                      <div class="price">
+                                          <del class="sale-price">$300.000 đ</del>
+                                          <span class="price-sale">250.000đ</span>
+                                      </div>
+                                  </div>
+                             </div><!-- khoi_sp -->           
+                             <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                                  <img src="../images/kn3.jpeg" class="anh_sp">
+                                  <div class="nen-sp">
+                                      
+                                  </div><!-- nen-sp -->
+                                  <div class="khoi_ic">
+                                      <ul>
+                                          <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                                          <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                                          <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                                      </ul>
+                                  </div><!-- khoi_ic -->
+                                  <div class="content-course">
+                                      <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                                      <div class="content-gv">
+                                          <img src="../images/gv1.jpg" class="img-gv">
+                                          <span class="ten-gv">Hồ Văn Cương</span>
+                                      </div>
+                                      <div class="evaluate">
+                                          <span class="rate-course">
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                          </span>
+                                          <span class="n-rate">(250)</span>
+                                      </div>
+                                      <div class="price">
+                                          <del class="sale-price">$300.000 đ</del>
+                                          <span class="price-sale">250.000đ</span>
+                                      </div>
+                                  </div>
+                             </div><!-- khoi_sp -->           
+                             <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                                  <img src="../images/kn3.jpeg" class="anh_sp">
+                                  <div class="nen-sp">
+                                      
+                                  </div><!-- nen-sp -->
+                                  <div class="khoi_ic">
+                                      <ul>
+                                          <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                                          <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                                          <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                                      </ul>
+                                  </div><!-- khoi_ic -->
+                                  <div class="content-course">
+                                      <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                                      <div class="content-gv">
+                                          <img src="../images/gv1.jpg" class="img-gv">
+                                          <span class="ten-gv">Hồ Văn Cương</span>
+                                      </div>
+                                      <div class="evaluate">
+                                          <span class="rate-course">
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                              <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                          </span>
+                                          <span class="n-rate">(250)</span>
+                                      </div>
+                                      <div class="price">
+                                          <del class="sale-price">$300.000 đ</del>
+                                          <span class="price-sale">250.000đ</span>
+                                      </div>
+                                  </div>
+                             </div><!-- khoi_sp -->                                            
+                        </div><!-- sanpham -->
+            	</div><!-- col-sm-9 -->
                 <div class="col-sm-3 menu1">
                     <div id="sidebar" style="height: 323px">
                             <ul> 

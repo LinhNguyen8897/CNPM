@@ -159,9 +159,199 @@ require 'Header.php';
                               <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
                           </ul>
                       </div><!-- khoi_ic -->
-                 </div><!-- khoi_sp -->
-             </div>
-         
+                      <div class="content-course">
+                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                          <div class="content-gv">
+                              <img src="../images/gv1.jpg" class="img-gv">
+                              <span class="ten-gv">Hồ Văn Cương</span>
+                          </div>
+                          <div class="evaluate">
+                              <span class="rate-course">
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                              </span>
+                              <span class="n-rate">(250)</span>
+                          </div>
+                          <div class="price">
+                              <del class="sale-price">$300.000 đ</del>
+                              <span class="price-sale">250.000đ</span>
+                          </div>
+                      </div>
+                 </div><!-- khoi_sp --> 
+                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                      <img src="../images/kn3.jpeg" class="anh_sp">
+                      <div class="nen-sp">
+                          
+                      </div><!-- nen-sp -->
+                      <div class="khoi_ic">
+                          <ul>
+                              <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                              <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                          </ul>
+                      </div><!-- khoi_ic -->
+                      <div class="content-course">
+                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                          <div class="content-gv">
+                              <img src="../images/gv1.jpg" class="img-gv">
+                              <span class="ten-gv">Hồ Văn Cương</span>
+                          </div>
+                          <div class="evaluate">
+                              <span class="rate-course">
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                              </span>
+                              <span class="n-rate">(250)</span>
+                          </div>
+                          <div class="price">
+                              <del class="sale-price">$300.000 đ</del>
+                              <span class="price-sale">250.000đ</span>
+                          </div>
+                      </div>
+                 </div><!-- khoi_sp -->    
+                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                      <img src="../images/kn3.jpeg" class="anh_sp">
+                      <div class="nen-sp">
+                          
+                      </div><!-- nen-sp -->
+                      <div class="khoi_ic">
+                          <ul>
+                              <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                              <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                          </ul>
+                      </div><!-- khoi_ic -->
+                      <div class="content-course">
+                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                          <div class="content-gv">
+                              <img src="../images/gv1.jpg" class="img-gv">
+                              <span class="ten-gv">Hồ Văn Cương</span>
+                          </div>
+                          <div class="evaluate">
+                              <span class="rate-course">
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                              </span>
+                              <span class="n-rate">(250)</span>
+                          </div>
+                          <div class="price">
+                              <del class="sale-price">$300.000 đ</del>
+                              <span class="price-sale">250.000đ</span>
+                          </div>
+                      </div>
+                 </div><!-- khoi_sp -->    
+                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                      <img src="../images/kn3.jpeg" class="anh_sp">
+                      <div class="nen-sp">
+                          
+                      </div><!-- nen-sp -->
+                      <div class="khoi_ic">
+                          <ul>
+                              <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                              <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                          </ul>
+                      </div><!-- khoi_ic -->
+                      <div class="content-course">
+                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                          <div class="content-gv">
+                              <img src="../images/gv1.jpg" class="img-gv">
+                              <span class="ten-gv">Hồ Văn Cương</span>
+                          </div>
+                          <div class="evaluate">
+                              <span class="rate-course">
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                              </span>
+                              <span class="n-rate">(250)</span>
+                          </div>
+                          <div class="price">
+                              <del class="sale-price">$300.000 đ</del>
+                              <span class="price-sale">250.000đ</span>
+                          </div>
+                      </div>
+                 </div><!-- khoi_sp -->  
+                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                      <img src="../images/kn3.jpeg" class="anh_sp">
+                      <div class="nen-sp">
+                          
+                      </div><!-- nen-sp -->
+                      <div class="khoi_ic">
+                          <ul>
+                              <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                              <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                          </ul>
+                      </div><!-- khoi_ic -->
+                      <div class="content-course">
+                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                          <div class="content-gv">
+                              <img src="../images/gv1.jpg" class="img-gv">
+                              <span class="ten-gv">Hồ Văn Cương</span>
+                          </div>
+                          <div class="evaluate">
+                              <span class="rate-course">
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                              </span>
+                              <span class="n-rate">(250)</span>
+                          </div>
+                          <div class="price">
+                              <del class="sale-price">$300.000 đ</del>
+                              <span class="price-sale">250.000đ</span>
+                          </div>
+                      </div>
+                 </div><!-- khoi_sp -->    
+                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
+                      <img src="../images/kn3.jpeg" class="anh_sp">
+                      <div class="nen-sp">
+                          
+                      </div><!-- nen-sp -->
+                      <div class="khoi_ic">
+                          <ul>
+                              <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
+                              <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
+                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                          </ul>
+                      </div><!-- khoi_ic -->
+                      <div class="content-course">
+                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                          <div class="content-gv">
+                              <img src="../images/gv1.jpg" class="img-gv">
+                              <span class="ten-gv">Hồ Văn Cương</span>
+                          </div>
+                          <div class="evaluate">
+                              <span class="rate-course">
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
+                              </span>
+                              <span class="n-rate">(250)</span>
+                          </div>
+                          <div class="price">
+                              <del class="sale-price">$300.000 đ</del>
+                              <span class="price-sale">250.000đ</span>
+                          </div>
+                      </div>
+                 </div><!-- khoi_sp -->                 
+             </div><!-- sanpham -->
         </div><!-- container -->
      </div><!--  khoikh  -->
 
@@ -227,6 +417,29 @@ require 'Header.php';
                                             </div>
                                         </div><!-- slick-track -->
                                 </div><!-- slick-list draggable -->
+                                <div class="slick-list draggable"  aria-live="polite">
+                                         <div class="slick-track" style="opacity: 1; width: 4275px; left: -1140px;" role="listbox"><div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                                            <div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                                                <div class="img-teacher">
+                                                    <img width="153px" height="153px" src="../images/gv1.jpg" alt="Phạm Thành Long">
+                                                </div>
+                                                <a href="/teacher/pham-thanh-long" class="name-teacher" tabindex="-1">Phạm Thành Long</a>
+                                                <div class="des-teacher">Luật sư - Diễn giả</div>
+                                            </div>
+                                        </div><!-- slick-track -->
+                                </div><!-- slick-list draggable -->
+                                <div class="slick-list draggable"  aria-live="polite">
+                                         <div class="slick-track" style="opacity: 1; width: 4275px; left: -1140px;" role="listbox"><div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                                            <div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                                                <div class="img-teacher">
+                                                    <img width="153px" height="153px" src="../images/gv1.jpg" alt="Phạm Thành Long">
+                                                </div>
+                                                <a href="/teacher/pham-thanh-long" class="name-teacher" tabindex="-1">Phạm Thành Long</a>
+                                                <div class="des-teacher">Luật sư - Diễn giả</div>
+                                            </div>
+                                        </div><!-- slick-track -->
+                                </div><!-- slick-list draggable -->
+
                          <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
                          
                     </div><!-- box-teacher slick-initialized slick-slider-->

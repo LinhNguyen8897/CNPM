@@ -235,7 +235,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">Course list</h1>
+                            <h1 class="page-header">Teacher list</h1>
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
@@ -244,7 +244,7 @@
                         <div class="col-lg-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading" >
-                                 Khóa học
+                                 Giảng viên
                                 </div>
                                 
                                 <!-- /.panel-heading -->
@@ -253,13 +253,13 @@
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                             <thead>
                                                 <tr>
-                                                    <th>User_course</th>                                       
-                                                    <th>User_teacher</th>
-                                                    <th>User_Sale</th> 
-                                                    <th> User_Activated</th>
-                                                    <th> Course_Name</th>   
-                                                    <th> Images</th>   
-                                                    <th> Document</th>                                 
+                                                    <th>User_teacher</th>                                       
+                                                    <th>User_TypeOfCourse</th>
+                                                    <th>Teacher_name</th> 
+                                                    <th> Email</th>
+                                                    <th> Teacher_image</th>   
+                                                    <th> Describee</th>   
+                                                    <th> User_level</th>                                 
                                                     <th>Edit</th>
                                                     <th> Delete</th>
                                                 </tr>
@@ -271,20 +271,20 @@
                                                     echo"Lỗi kết nối tới cơ sở dữ liệu";
                                                 }
 
-                                                $result="select * from course";
+                                                $result="select * from teacher";
                                                 $rs_name = $conn->query($result);                                          
                                                 while ($row = mysqli_fetch_assoc($rs_name))
                                                 {
                                                   echo"<tr>";
-                                                  echo"<td>".$row['User_course']."</td>";
                                                   echo"<td>".$row['User_teacher']."</td>";
-                                                  echo"<td>".$row['User_Sale']."</td>";
-                                                  echo"<td>".$row['User_Activated']."</td>";
-                                                  echo"<td>".$row['Course_Name']."</td>";
-                                                  echo"<td>".$row['Images']."</td>";
-                                                  echo"<td>".$row['Document']."</td>";
-                                                  echo"<td><a href='Edit_Course.php?User_course=$row[User_course]'>Edit</a></td>";
-                                                  echo"<th><a href='Delete_Course.php?User_course=$row[User_course] 'onclick='return show_confirm();' style='color:#f3f;'>Delete</a></th>";         
+                                                  echo"<td>".$row['User_TypeOfCourse']."</td>";
+                                                  echo"<td>".$row['Teacher_name']."</td>";
+                                                  echo"<td>".$row['Email']."</td>";
+                                                  echo"<td>".$row['Teacher_image']."</td>";
+                                                  echo"<td>".$row['Describee']."</td>";
+                                                  echo"<td>".$row['User_level']."</td>";
+                                                  echo"<td><a href='Edit_Course.php?User_teacher=$row[User_teacher]'>Edit</a></td>";
+                                                  echo"<th><a href='Delete_Teacher.php?User_teacher=$row[User_teacher] 'onclick='return show_confirm();' style='color:#f3f;'>Delete</a></th>";         
                                                   echo"</tr>";                                 
                                                 }
                                                 mysqli_close($conn);  

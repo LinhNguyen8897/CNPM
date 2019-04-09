@@ -65,3 +65,38 @@ font-size: 16px; position: absolute; top: 0; left: 0;}
 #sidabar #sidebar_but ul li{list-style: none;display: inline-block;
  padding: 10px 15px; background: gray; margin-bottom: 10px;margin-left: 3px}
 #sidabar #sidebar_but ul li a{text-decoration: none;color: white}
+
+/*khoa hoc*/
+
+
+.sanpham {height: auto; display: flex;flex-wrap: wrap;margin: 0}
+.khoi_sp {position: relative;left: 0;top: 0;visibility: visible;width: 31%;height: 350px;overflow: hidden;margin-left: 1em;
+	border-radius: 11px;margin-bottom: 2em;border: 1px solid gainsboro;}
+img.anh_sp {position: absolute;top: 0;left: 0;z-index: 1;width: 100%;height: 196.55px;}
+.nen-sp {position: absolute;top: 0;left: 0;z-index: 2;/* background-color: rgba(255,255,255,0.4); */width: 100%;
+    height: 196.55px;opacity: 0;transition: 0.4s;background: linear-gradient(#244b580a, #18525263);}
+.nen-sp:hover {opacity: 1;}
+.khoi_ic {position: absolute;top: 8px;right: 55px;z-index: 3;opacity: 0;display: inline-block;width: 32px;height: 4em;
+    list-style: none;border-radius: 2px;color: #4a4a4a;font-size: 14px;font-weight: 500;cursor: pointer;transition: 0.4s;transform: scale;}
+.khoi_sp:hover .khoi_ic {transform: scale;opacity: 1;}
+.khoi_ic ul li {list-style: none;padding: 12px 11px 16px 4px;text-align: center;display: inline-block;}
+a.icon {background: white;color: black;padding: 10px;width: 8em;height: 9em;transition: 0.1s;   box-sizing: border-box;}
+a.icon:hover {color: white;background: orange;}
+.content-course {position: absolute;bottom: 0px;left: 0;}
+h3.tensp {font-size: 18px;font-weight: bold;font-family: unset;margin-left: 0.5em;}
+img.img-gv {border-radius: 50%;width: 37px;margin-left: 0.4em;}
+span.ten-gv {font-size: 15px;margin-left: 0.5em;}
+.evaluate {margin-left: 0.5em;margin-top: 0.5em;padding-top: -1.5em;}
+.rate-course i.fa { color: #de4a11;}
+span.price-sale {float: right;font-size: 17px;font-weight: bold;}
+.price {margin-left: 0.5em;margin-top: 0.5em;}
+/*dang ky thÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â nh giang vien*/
+div#so4 {padding-top: 50px;}
+.khoigiangvien .banner {width: 100%;height: 400px;background-image: url(../images/gv.jpg);position: relative;background-size: cover;
+overflow: hidden;}
+.banner .h3.td_banner {position: absolute;top: 32%;right: 2%;z-index: 1;font-size: 40px;
+text-align: center;color: white;text-transform: uppercase;font-family: lato_r;}
+.banner a.nutdk {position: absolute;top: 65%;right: 16%;z-index: 2;font-size: 40px;
+color: black;font-family: lato_r;text-transform: uppercase;display: inline-block;background-color: white;padding: 4px 14px;
+border-radius: 7px;text-decoration: none;transition: 0.5s;border: 1px solid white;}
+a.nutdk:hover {border: 1px solid #454343;color: #3d3dc0;}

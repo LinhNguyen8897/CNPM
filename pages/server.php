@@ -29,9 +29,9 @@ if(isset($_POST['Register'])){
 	}
 	if($UserName && $Email && $PassWord_1){
 		// ket noi csdl
-	$conn = mysqli_connect('localhost', 'root', '', 'course') or die ('Không thể kết nối tới database');
-	$sql= " insert into admin(UserName, Email,PassWord) values('$UserName','$Email','$PassWord_1')";
- mysqli_query($conn,$sql);
+	require '../pages/config.php';
+	 $sql=  "  INSERT INTO `admin`(`UserName`, `Email`, `PassWord`)  VALUES ('".$UserName."','".$Email."','".$PassWord_1." ) "; 
+ 	mysqli_query($conn,$sql);
 
  //dong ket noi
  mysqli_close($conn);

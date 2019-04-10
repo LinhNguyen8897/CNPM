@@ -23,6 +23,7 @@
     <body>
    <?php
 require 'Header.php';
+require '../pages/config.php';
 ?>
             <div id="page-wrapper">
                 <div class="container-fluid">
@@ -40,35 +41,30 @@ require 'Header.php';
                                 </div>
                                 <!-- /.panel-heading -->
                                 <?php
-                                if (reset($_POST["User_course"])) {
-                                    $User_course = $_POST["User_course"];
-                                    $Course_Name = $_POST["Course_Name"];
-                                    $User_teacher=$_POST["User_teacher"]
-                                    $Nd_baiviet = $_POST["Nd_baiviet"];
-                                    $Document = $_POST["Document"];
-                                    $Price = $_POST["Price"];
-                                    $Images = $_FILES["Images"]["name"];
-                                    $query = "SELECT * FROM `teacher` WHERE 1";
-                                    $result = mysqli_query($conn, $query);
-                                    while($row = $result->fetch_array())
+                                $result="select * from teacher";
+                                    $rs_name = $conn->query($result);                                          
+                                    while ($row = mysqli_fetch_assoc($rs_name))
                                     {
                                     $rows[] = $row;
                                     }
-                                     require '../pages/config.php';
+                                if (isset($_POST["ok"])) {
+                                    $User_course = $_POST["User_course"];
+                                    $Course_Name = $_POST["Course_Name"];
+                                    $User_teacher=$_POST["User_teacher"];
+                                    $Nd_baiviet = $_POST["Nd_baiviet"];
+                                    $Document = $_POST["Document"];
+                                    $Price = $_POST["Price"];
+                                    $image =basename( $_FILES["image"]["name"]);    
                                     if (!$conn) {
                                         echo"Lỗi kết nối tới cơ sở dữ liệu";
                                     }
-                                    $sql    = 'INSERT INTO `course`(`User_course`, `Course_Name`, `User_teacher`, `Nd_baiviet`, `Document`, `Price`, `Images`, ) VALUES ("'.$User_course.'","'.$Course_Name.'","'.$User_teacher.'","'.$Nd_baiviet.'","'.$Document.'","'.'Giá'.'","'.$Images.'")';
-                                    if (move_uploaded_file($_FILES["Images"]["tmp_name"], "../images/".$_FILES["Images"]["name"])) {
-                                             echo "The file ". basename( $_FILES["Images"]["name"]). " has been uploaded.";
-                                    } 
-                                    else 
-                                    {
-                                     echo "Sorry, there was an error uploading your file.";
-                                    }
+                                    echo 'string'. $User_course."-".$Course_Name."-".$User_teacher." ".$Nd_baiviet." ".$image."  ".$Document;
 
-                                    $stmt   = $conn->prepare($sql); // Prevent MySQl injection. $stmt means statement
-                                    $stmt->execute();
+                                    $sql=  "  INSERT INTO `course`(`User_course`, `User_teacher`, `User_Sale`, `User_Activated`, `Course_Name`, `Nd_baiviet`, `Price`, `Images`,`Document`) 
+                                    VALUES ('".$User_course."','".$User_teacher."','','','".$Course_Name."','".$Nd_baiviet."','".$Price."',
+                                    '".$image."','".$Document."') "; 
+                                    $stmt  = $conn->query($sql);                                                                
+                                     move_uploaded_file($_FILES["image"]["tmp_name"],"../../images/$image");
                                 }
                                 ?>
                                 <div class="panel-body">
@@ -106,8 +102,9 @@ require 'Header.php';
                                             <label>Hình ảnh:</label>
                                              <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 11.8em">
                                                 <legend></legend>
-                                            <input type="file" name="Images" style="margin-bottom: 15px;margin-left: 15px;">
+                                            <input type="file" name="image" style="margin-bottom: 15px;margin-left: 15px;">
                                         </fieldset>
+                                        <button type="submit" name="ok"> Lưu</button>
                                     </form>
                                    
                               </div>

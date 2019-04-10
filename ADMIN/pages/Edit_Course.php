@@ -23,6 +23,7 @@
     <body>
    <?php
 require 'Header.php';
+require '../pages/config.php';
 ?>
             <div id="page-wrapper">
                 <div class="container-fluid">
@@ -39,11 +40,44 @@ require 'Header.php';
                                    <p class="customer" style=" margin: 8px 0 10px;    font-size: 19px;color: royalblue;">Sửa khóa học</p>                                  
                                 </div>
                                 <!-- /.panel-heading -->
+                                 <?php
+                                    $result="select * from teacher";
+                                    $rs_name = $conn->query($result);                                          
+                                    while ($row = mysqli_fetch_assoc($rs_name))
+                                    {
+                                    $rows[] = $row;
+                                    }
+                                    $result="select * from sale";
+                                    $rs_namee = $conn->query($result);                                          
+                                    while ($row = mysqli_fetch_assoc($rs_namee))
+                                    {
+                                    $rows1[] = $row;
+                                    }
+                                    $result="select * from activated";
+                                    $rs_namee = $conn->query($result);                                          
+                                    while ($row = mysqli_fetch_assoc($rs_namee))
+                                    {
+                                    $rows2[] = $row;
+                                    }
+                                     $result="select * from course";
+                                    $rs_namee = $conn->query($result);                                          
+                                    while ($row = mysqli_fetch_assoc($rs_namee))
+                                    {
+                                    $rows3[] = $row;
+                                    }
+                                    $User_course = $_GET["User_course"];
+
+                                ?>
                                 <div class="panel-body">
                                     <form method="post" action="" enctype="multipart/form-data">
                                         <fieldset>
                                             <label>Mã khóa học:</label>
-                                            <input type="text" name="tieude" value="" placeholder="Mã khóa học " style="margin-left: 2em;width: 20em;" >
+                                            <select style="margin-left: 1.8em;width: 20em;height: 2em;" name="User_course">
+                                                <?php foreach ($rows3 as $key => $value) {
+                                                    echo '<option value="'.$value["User_course"].'" >'.$value["User_course"].'</option>';
+                                                  }
+                                                   ?> 
+                                            </select>
                                         </fieldset>
                                         <fieldset>
                                             <label>Tên khóa học:</label>
@@ -51,10 +85,29 @@ require 'Header.php';
                                         </fieldset>
                                         <fieldset>
                                             <label>Giảng viên:</label>
-                                            <select style="margin-left: 2.8em;width: 20em;height: 2em;">
-                                                <option>Nguyễn Văn A</option>
-                                                <option>Nguyễn Văn A</option>
-                                                <option>Nguyễn Văn A</option>
+                                            <select style="margin-left: 2.8em;width: 20em;height: 2em;" name="User_teacher">
+                                                <?php foreach ($rows as $key => $value) {
+                                                    echo '<option value="'.$value["User_teacher"].'" >'.$value["Teacher_name"].'</option>';
+                                                  }
+                                                   ?> 
+                                            </select>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label>Sale:</label>
+                                            <select style="margin-left: 5.8em;width: 20em;height: 2em;" name="User_Sale">
+                                                <?php foreach ($rows1 as $key => $value) {
+                                                    echo '<option value="'.$value["User_Sale"].'" >'.$value["Name_Sale"].'</option>';
+                                                  }
+                                                   ?> 
+                                            </select>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label>Kích hoạt:</label>
+                                            <select style="margin-left: 3.3em;width: 20em;height: 2em;" name="User_teacher">
+                                                <?php foreach ($rows2 as $key => $value) {
+                                                    echo '<option value="'.$value["User_Activated"].'" >'.$value["Name_Activated"].'</option>';
+                                                  }
+                                                   ?> 
                                             </select>
                                         </fieldset>
                                          <fieldset>
@@ -73,7 +126,7 @@ require 'Header.php';
                                             <label>Hình ảnh cũ:</label>
                                              <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 11.8em">
                                                 <legend></legend>
-                                            <input type="file" name="image" style="margin-bottom: 15px;margin-left: 15px;">
+                                            <img  src="../../images/<?php echo $data[0]['Images'] ;?> " width="160px"></td>
                                         </fieldset>
                                         <label>Hình ảnh cũ:</label>
                                              <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 11.8em">

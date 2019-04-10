@@ -32,48 +32,81 @@ require 'Header.php';
                                 <div class="panel-heading">
                                     <div class="them_customer" style="   margin-top: 0.1em; float: right;margin-left: 27px;background: white;padding: 12px;" > 
                                         <a href="" style="color: black; text-decoration: none;"><i class="fa fa-arrow-left"></i>Trở về</a> </div>
-                                    <div class="them_customer" style="   margin-top: 0.1em; float: right;margin-left: 27px;background: royalblue;padding: 12px;" > 
+                                    <div class="them_customer" style="   margin-top: 0.1em; float: right;margin-left: 27px;background: royalblue;padding: 12px;" name="luu" > 
                                         <a href="" style="color: white; text-decoration: none;"><i class="fa fa-save"></i>Lưu và tiếp tục</a> </div>
                                     <div class="them_customer" style="    margin-top: 0.1em;float: right;padding: 12px;background: royalblue;"> 
                                       <a href="" style="color: white; text-decoration: none;"><i class="fa fa-check"></i>Lưu</a> </div>                               
                                    <p class="customer" style=" margin: 8px 0 10px;    font-size: 19px;color: royalblue;">Tạo khóa học</p>                                  
                                 </div>
                                 <!-- /.panel-heading -->
+                                <?php
+                                if (reset($_POST["User_course"])) {
+                                    $User_course = $_POST["User_course"];
+                                    $Course_Name = $_POST["Course_Name"];
+                                    $User_teacher=$_POST["User_teacher"]
+                                    $Nd_baiviet = $_POST["Nd_baiviet"];
+                                    $Document = $_POST["Document"];
+                                    $Price = $_POST["Price"];
+                                    $Images = $_FILES["Images"]["name"];
+                                    $query = "SELECT * FROM `teacher` WHERE 1";
+                                    $result = mysqli_query($conn, $query);
+                                    while($row = $result->fetch_array())
+                                    {
+                                    $rows[] = $row;
+                                    }
+                                     require '../pages/config.php';
+                                    if (!$conn) {
+                                        echo"Lỗi kết nối tới cơ sở dữ liệu";
+                                    }
+                                    $sql    = 'INSERT INTO `course`(`User_course`, `Course_Name`, `User_teacher`, `Nd_baiviet`, `Document`, `Price`, `Images`, ) VALUES ("'.$User_course.'","'.$Course_Name.'","'.$User_teacher.'","'.$Nd_baiviet.'","'.$Document.'","'.'Giá'.'","'.$Images.'")';
+                                    if (move_uploaded_file($_FILES["Images"]["tmp_name"], "../images/".$_FILES["Images"]["name"])) {
+                                             echo "The file ". basename( $_FILES["Images"]["name"]). " has been uploaded.";
+                                    } 
+                                    else 
+                                    {
+                                     echo "Sorry, there was an error uploading your file.";
+                                    }
+
+                                    $stmt   = $conn->prepare($sql); // Prevent MySQl injection. $stmt means statement
+                                    $stmt->execute();
+                                }
+                                ?>
                                 <div class="panel-body">
-                                    <form method="post" action="" enctype="multipart/form-data">
+                                    <form method="post" action="Add_Course.php" enctype="multipart/form-data">
                                         <fieldset>
                                             <label>Mã khóa học:</label>
-                                            <input type="text" name="tieude" value="" placeholder="Mã khóa học " style="margin-left: 2em;width: 20em;" >
+                                            <input type="text" name="User_course" value="" placeholder="Mã khóa học " style="margin-left: 2em;width: 20em;" >
                                         </fieldset>
                                         <fieldset>
                                             <label>Tên khóa học:</label>
-                                            <input type="text" name="tieude" value="" placeholder="Tên khóa học" style="    margin-left: 1.6em;width: 20em;">
+                                            <input type="text" name="Course_Name" value="" placeholder="Tên khóa học" style="    margin-left: 1.6em;width: 20em;">
                                         </fieldset>
                                         <fieldset>
                                             <label>Giảng viên:</label>
-                                            <select style="margin-left: 2.8em;width: 20em;height: 2em;">
-                                                <option>Nguyễn Văn A</option>
-                                                <option>Nguyễn Văn A</option>
-                                                <option>Nguyễn Văn A</option>
+                                            <select style="margin-left: 2.8em;width: 20em;height: 2em;" name="User_teacher">
+                                                <?php foreach ($rows as $key => $value) {
+                                                    echo '<option value="'.$value["User_teacher"].'" >'.$value["Teacher_name"].'</option>';
+                                                  }
+                                                   ?> 
                                             </select>
                                         </fieldset>
                                          <fieldset>
                                             <label>Nội dung bài viết:</label>
-                                            <textarea rows="5" cols="37" name="mota" placeholder="Nôi dung bài viết " style="margin-bottom: 15px;"></textarea>
+                                            <textarea rows="5" cols="37" name="Nd_baiviet" placeholder="Nôi dung bài viết " style="margin-bottom: 15px;"></textarea>
                                         </fieldset>
                                         <fieldset>
                                             <label>Nội dung miêu tả:</label>
-                                            <textarea rows="5" cols="37" name="mota"placeholder="Nội dung mô tả ngắn"style="margin-bottom: 15px;"></textarea>
+                                            <textarea rows="5" cols="37" name="Document"placeholder="Nội dung mô tả ngắn"style="margin-bottom: 15px;"></textarea>
                                         </fieldset>
                                         <fieldset>
                                             <label>Giá:</label>
-                                            <input type="text" name="tieude" value="" placeholder="Giá " style="width: 20em;margin-left: 6.5em;">
+                                            <input type="text" name="Price" value="" placeholder="Giá " style="width: 20em;margin-left: 6.5em;">
                                         </fieldset>
                                        
                                             <label>Hình ảnh:</label>
                                              <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 11.8em">
                                                 <legend></legend>
-                                            <input type="file" name="image" style="margin-bottom: 15px;margin-left: 15px;">
+                                            <input type="file" name="Images" style="margin-bottom: 15px;margin-left: 15px;">
                                         </fieldset>
                                     </form>
                                    

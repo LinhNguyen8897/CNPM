@@ -37,7 +37,7 @@
                     $data=mysqli_fetch_assoc($result);
                     $_session["Level"]=$data["Level"];
                     if($_session["Level"]==2){
-                        header("location:ADMIN/index.php");
+                        header("location:../ADMIN/index.php");
                         exit();
                     }else{
                     	$_session["UserName"]=$UserName;

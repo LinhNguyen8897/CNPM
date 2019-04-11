@@ -36,7 +36,7 @@ require 'Header.php';
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="them_customer" style="    margin-top: 0.1em;float: right;padding: 12px;background: royalblue;"> 
-                                        <a href="" style="color: white; text-decoration: none;">Thêm khách hàng</a> </div>
+                                        <a href="../pages/Add_Customer.php" style="color: white; text-decoration: none;">Thêm khách hàng</a> </div>
                                    <p class="customer" style=" margin: 8px 0 10px;    font-size: 19px;color: royalblue;">Khách hàng</p>
                                 </div>
                                 <!-- /.panel-heading -->

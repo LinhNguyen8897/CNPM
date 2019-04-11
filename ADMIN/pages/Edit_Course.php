@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Add Course</title>
+        <title>Edit Course</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/metisMenu.min.css" rel="stylesheet">
         <link href="../css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
@@ -32,7 +32,7 @@ require '../pages/config.php';
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="them_customer" style="   margin-top: 0.1em; float: right;margin-left: 27px;background: white;padding: 12px;" > 
-                                        <a href="" style="color: black; text-decoration: none;"><i class="fa fa-arrow-left"></i>Trở về</a> </div>
+                                        <a href="../pages/index.php" style="color: black; text-decoration: none;"><i class="fa fa-arrow-left"></i>Trở về</a> </div>
                                     <div class="them_customer" style="   margin-top: 0.1em; float: right;margin-left: 27px;background: royalblue;padding: 12px;" > 
                                         <a href="" style="color: white; text-decoration: none;"><i class="fa fa-save"></i>Lưu và tiếp tục</a> </div>
                                     <div class="them_customer" style="    margin-top: 0.1em;float: right;padding: 12px;background: royalblue;"> 
@@ -41,6 +41,7 @@ require '../pages/config.php';
                                 </div>
                                 <!-- /.panel-heading -->
                                  <?php
+
                                     $result="select * from teacher";
                                     $rs_name = $conn->query($result);                                          
                                     while ($row = mysqli_fetch_assoc($rs_name))
@@ -59,17 +60,100 @@ require '../pages/config.php';
                                     {
                                     $rows2[] = $row;
                                     }
-                                     $result="select * from course";
+                                    $result="select * from course";
                                     $rs_namee = $conn->query($result);                                          
                                     while ($row = mysqli_fetch_assoc($rs_namee))
                                     {
                                     $rows3[] = $row;
                                     }
+                                
                                     $User_course = $_GET["User_course"];
+                                    var_dump($User_course);
+                                    $loi=array();
+                                    $loi["Course_Name"]=$loi["Nd_baiviet"]=$loi["Document"]=$loi["Price"]=$loi["images"]=NULL;
+                                    $Course_Name=$Nd_baiviet=$Document=$Price=$images=NULL;
+                                    if(isset($_POST["ok"])){
+                                        
+                                         $User_course=$_POST["User_course"];
 
+                                         if (empty($_POST["Course_Name"])) {
+                                             $loi["Course_Name"]= "vui long nhap ten khoa hoc";
+                                         }
+                                         else {
+                                            $Course_Name=$_POST["Course_Name"];
+                                        }
+                                         $User_teacher=$_POST["User_teacher"];
+                                         $User_Sale=$_POST["User_Sale"];
+                                         $User_Activated=$_POST["User_Activated"];
+
+                                          
+                                        if (empty($_POST["Nd_baiviet"])) {
+                                             $loi["Nd_baiviet"]= "vui long nhap noi dung bai viet";
+                                         }
+                                         else {
+                                            $Nd_baiviet=$_POST["Nd_baiviet"];
+                                        }
+
+                                         if (empty($_POST["Document"])) {
+                                             $loi["Document"]= "vui long nhap mo ta";
+                                         }
+                                         else {
+                                            $Document=$_POST["Document"];
+                                        }
+
+                                         if (empty($_POST["Price"])) {
+                                             $loi["Price"]= "vui long nhap gia";
+                                         }
+                                         else {
+                                            $Price=$_POST["Price"];
+                                        }
+
+
+                                        if (empty($_POST["images"])) {
+                                             $loi["images"]= "vui long nhap anh";
+                                         }
+                                         else {
+                                            $Price=$_POST["images"];
+                                        }
+                                        if ($Course_Name  && $Nd_baiviet && $Document && $Price && $images  ) {
+                                            if (!$conn) 
+                                            {
+                                                  echo"Lỗi kết nối tới cơ sở dữ liệu";
+                                            } 
+                                            //truy van
+                                            if($image=='none'){
+                                                $sql = "update course set Course_Name='$Course_Name',Nd_baiviet='$Nd_baiviet',Price='$Price',images='$images',Document='$Document' where User_course=$User_course";
+                                                echo $sql ; 
+                                                mysqli_query($conn,$sql);
+                                                    
+                                                }
+                                            else 
+                                            {
+                                                $sql = "update course set Course_Name='$Course_Name',Nd_baiviet='$Nd_baiviet',Price='$Price',images='$images',Document='$Document' where User_course=$User_course";
+                                                echo $sql ; 
+                                                mysqli_query($conn,$sql);                                                    
+                                                move_uploaded_file($_FILES["images"]["tmp_name"],"../../images/".$_FILES["images"]["name"]);
+                                                
+                                            }
+                                                //dong ket noi 
+                                                mysqli_close($conn);
+                                            }
+
+                                    }
+                                    //mo ket noi
+                                    if (!$conn) 
+                                    {
+                                          echo"Lỗi kết nối tới cơ sở dữ liệu";
+                                    }  
+                                    //truy van
+                                    $result= "SELECT `User_course`, `User_teacher`, `User_Sale`, `User_Activated`, `Course_Name`, `Nd_baiviet`, `Price`, `Images`, `Document` FROM `course`  where User_course=$User_course";
+                                    var_dump($result);
+                                    $rs_name = $conn->query($result);
+                                    //$data = $rs_name->fetch_assoc();
                                 ?>
                                 <div class="panel-body">
-                                    <form method="post" action="" enctype="multipart/form-data">
+                                    <form method="post" action="Edit_Course.php?User_course=<?php echo $User_course ?>" 
+                                        enctype="multipart/form-data">
                                         <fieldset>
                                             <label>Mã khóa học:</label>
                                             <select style="margin-left: 1.8em;width: 20em;height: 2em;" name="User_course">
@@ -81,7 +165,7 @@ require '../pages/config.php';
                                         </fieldset>
                                         <fieldset>
                                             <label>Tên khóa học:</label>
-                                            <input type="text" name="tieude" value="" placeholder="Tên khóa học" style="    margin-left: 1.6em;width: 20em;">
+                                            <input type="text" name="Course_Name" value="" placeholder="Tên khóa học" style="    margin-left: 1.6em;width: 20em;">
                                         </fieldset>
                                         <fieldset>
                                             <label>Giảng viên:</label>
@@ -103,7 +187,7 @@ require '../pages/config.php';
                                         </fieldset>
                                         <fieldset>
                                             <label>Kích hoạt:</label>
-                                            <select style="margin-left: 3.3em;width: 20em;height: 2em;" name="User_teacher">
+                                            <select style="margin-left: 3.3em;width: 20em;height: 2em;" name="User_Activated">
                                                 <?php foreach ($rows2 as $key => $value) {
                                                     echo '<option value="'.$value["User_Activated"].'" >'.$value["Name_Activated"].'</option>';
                                                   }
@@ -112,27 +196,28 @@ require '../pages/config.php';
                                         </fieldset>
                                          <fieldset>
                                             <label>Nội dung bài viết:</label>
-                                            <textarea rows="5" cols="37" name="mota" placeholder="Nôi dung bài viết " style="margin-bottom: 15px;"></textarea>
+                                            <textarea rows="5" cols="37" name="Nd_baiviet" placeholder="Nôi dung bài viết " style="margin-bottom: 15px;"></textarea>
                                         </fieldset>
                                         <fieldset>
                                             <label>Nội dung miêu tả:</label>
-                                            <textarea rows="5" cols="37" name="mota"placeholder="Nội dung mô tả ngắn"style="margin-bottom: 15px;"></textarea>
+                                            <textarea rows="5" cols="37" name="Document"placeholder="Nội dung mô tả ngắn"style="margin-bottom: 15px;"></textarea>
                                         </fieldset>
                                         <fieldset>
                                             <label>Giá:</label>
-                                            <input type="text" name="tieude" value="" placeholder="Giá " style="width: 20em;margin-left: 6.5em;">
+                                            <input type="text" name="Price" value="" placeholder="Giá " style="width: 20em;margin-left: 6.5em;">
                                         </fieldset>
                                        
                                             <label>Hình ảnh cũ:</label>
                                              <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 11.8em">
                                                 <legend></legend>
-                                            <img  src="../../images/<?php echo $data[0]['Images'] ;?> " width="160px"></td>
+                                            <img  style="width: 160px" src="../../images/<?php echo $rs_name[0]['Images'] ;?> " >
                                         </fieldset>
                                         <label>Hình ảnh cũ:</label>
                                              <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 11.8em">
                                                 <legend></legend>
-                                            <input type="file" name="image" style="margin-bottom: 15px;margin-left: 15px;">
+                                            <input type="file" multiple="" name="images" style="margin-bottom: 15px;margin-left: 15px;">
                                         </fieldset>
+                                        <button type="submit" name="ok"> Lưu</button>
                                     </form>
                                    
                               </div>

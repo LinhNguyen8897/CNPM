@@ -116,7 +116,10 @@
                                         <a href="../pages/List_Customer.php">List Customer</a>
                                     </li>
                                     <li>
-                                        <a href="morris.html">Add Customer</a>
+                                        <a href="../pages/Add_Customer.php">Add Customer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Edit Customer</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
@@ -149,7 +152,10 @@
                                         <a href="../pages/List_Teacher.php">List Teacher</a>
                                     </li>
                                     <li>
-                                        <a href="#">Add Teacher</a>
+                                        <a href="../pages/Add_Teacher.php">Add Teacher</a>
+                                    </li>
+                                    <li>
+                                        <a href="../pages/Add_Customer.php">Edit Customer</a>
                                     </li>
                                    <!--  <li>
                                         <a href="#">Third Level <span class="fa arrow"></span></a>
@@ -179,7 +185,7 @@
                                         <a href="../pages/List_Uer.php">List User</a>
                                     </li>
                                     <li>
-                                        <a href="buttons.html">Add User</a>
+                                        <a href="../pages/Add_User.php">Add User</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->

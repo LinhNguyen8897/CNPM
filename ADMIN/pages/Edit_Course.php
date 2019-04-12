@@ -41,6 +41,12 @@ require '../pages/config.php';
                                 </div>
                                 <!-- /.panel-heading -->
                                  <?php
+                                    $User_course = $_GET["User_course"];
+
+                                    //var_dump($User_course);
+                                    $loi=array();
+                                    $loi["Course_Name"]=$loi["Nd_baiviet"]=$loi["Document"]=$loi["Price"]=$loi["images"]=NULL;
+                                    $Course_Name=$Nd_baiviet=$Document=$Price=$images=NULL;
 
                                     $result="select * from teacher";
                                     $rs_name = $conn->query($result);                                          
@@ -66,12 +72,13 @@ require '../pages/config.php';
                                     {
                                     $rows3[] = $row;
                                     }
-                                
-                                    $User_course = $_GET["User_course"];
-                                    var_dump($User_course);
-                                    $loi=array();
-                                    $loi["Course_Name"]=$loi["Nd_baiviet"]=$loi["Document"]=$loi["Price"]=$loi["images"]=NULL;
-                                    $Course_Name=$Nd_baiviet=$Document=$Price=$images=NULL;
+
+                                    $querydata = "SELECT * FROM `course` WHERE  User_course='$User_course'";
+                                    $resultdata = $conn->query($querydata);  
+                                    while($datarow = mysqli_fetch_assoc($resultdata))
+                                    {
+                                        $data[] = $datarow;
+                                    }                                
                                     if(isset($_POST["ok"])){
                                         
                                          $User_course=$_POST["User_course"];
@@ -94,14 +101,14 @@ require '../pages/config.php';
                                             $Nd_baiviet=$_POST["Nd_baiviet"];
                                         }
 
-                                         if (empty($_POST["Document"])) {
+                                        if (empty($_POST["Document"])) {
                                              $loi["Document"]= "vui long nhap mo ta";
                                          }
                                          else {
                                             $Document=$_POST["Document"];
                                         }
 
-                                         if (empty($_POST["Price"])) {
+                                        if (empty($_POST["Price"])) {
                                              $loi["Price"]= "vui long nhap gia";
                                          }
                                          else {
@@ -115,41 +122,35 @@ require '../pages/config.php';
                                          else {
                                             $Price=$_POST["images"];
                                         }
-                                        if ($Course_Name  && $Nd_baiviet && $Document && $Price && $images  ) {
+                                        echo 'string'. $User_course."-".$Course_Name."-".$User_teacher." ".$User_Sale." ".$User_Activated."  ".$Nd_baiviet." ".$Document." ".$Price." ".$images;
+
+                                        if ($User_course && $User_teacher && $User_Sale && $User_Activated && $Course_Name  && $Nd_baiviet  && $Price &&   $images && $Document ) {
+
                                             if (!$conn) 
                                             {
                                                   echo"Lỗi kết nối tới cơ sở dữ liệu";
                                             } 
                                             //truy van
                                             if($image=='none'){
-                                                $sql = "update course set Course_Name='$Course_Name',Nd_baiviet='$Nd_baiviet',Price='$Price',images='$images',Document='$Document' where User_course=$User_course";
-                                                echo $sql ; 
-                                                mysqli_query($conn,$sql);
-                                                    
+                                                $sql="UPDATE `course` SET `User_course`='$User_course',`User_teacher`='$User_teacher',`User_Sale`='$User_Sale',`User_Activated`='$User_Activated',`Course_Name`='$User_course',`Nd_baiviet`='$Nd_baiviet',`Price`='$Price',`Images`='$images',`Document`='$Document' WHERE  User_course='$User_course'";
+                                                $rs_name = $conn->query($sql);
+                                                var_dump($rs_name);     
                                                 }
                                             else 
                                             {
-                                                $sql = "update course set Course_Name='$Course_Name',Nd_baiviet='$Nd_baiviet',Price='$Price',images='$images',Document='$Document' where User_course=$User_course";
-                                                echo $sql ; 
-                                                mysqli_query($conn,$sql);                                                    
+                                                $sql="UPDATE `course` SET `User_course`='$User_course',`User_teacher`='$User_teacher',`User_Sale`='$User_Sale',`User_Activated`='$User_Activated',`Course_Name`='$User_course',`Nd_baiviet`='$Nd_baiviet',`Price`='$Price',`Images`='$images',`Document`='$Document' WHERE  User_course='$User_course'";
+                                                 $rs_name = $conn->query($sql);
+                                                 var_dump($rs_name);                                                   
                                                 move_uploaded_file($_FILES["images"]["tmp_name"],"../../images/".$_FILES["images"]["name"]);
-                                                
+                                               
                                             }
                                                 //dong ket noi 
                                                 mysqli_close($conn);
                                             }
 
                                     }
-                                    //mo ket noi
-                                    if (!$conn) 
-                                    {
-                                          echo"Lỗi kết nối tới cơ sở dữ liệu";
-                                    }  
-                                    //truy van
-                                    $result= "SELECT `User_course`, `User_teacher`, `User_Sale`, `User_Activated`, `Course_Name`, `Nd_baiviet`, `Price`, `Images`, `Document` FROM `course`  where User_course=$User_course";
-                                    var_dump($result);
-                                    $rs_name = $conn->query($result);
-                                    //$data = $rs_name->fetch_assoc();
+                                     
+                                    
                                 ?>
                                 <div class="panel-body">
                                     <form method="post" action="Edit_Course.php?User_course=<?php echo $User_course ?>" 
@@ -210,7 +211,7 @@ require '../pages/config.php';
                                             <label>Hình ảnh cũ:</label>
                                              <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 11.8em">
                                                 <legend></legend>
-                                            <img  style="width: 160px" src="../../images/<?php echo $rs_name[0]['Images'] ;?> " >
+                                            <img  style="width: 20em" src="../../images/<?php echo $data[0]['Images'] ;?> " >
                                         </fieldset>
                                         <label>Hình ảnh cũ:</label>
                                              <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 11.8em">

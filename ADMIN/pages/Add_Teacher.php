@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Add Course</title>
+        <title>Add Teacher</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/metisMenu.min.css" rel="stylesheet">
         <link href="../css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
@@ -41,69 +41,87 @@ require '../pages/config.php';
                                 </div>
                                 <!-- /.panel-heading -->
                                 <?php
-                                $result="select * from teacher";
-                                    $rs_name = $conn->query($result);                                          
-                                    while ($row = mysqli_fetch_assoc($rs_name))
-                                    {
-                                    $rows[] = $row;
-                                    }
+                                $result="select * from typeofcourse";
+                                $rs_name = $conn->query($result);                                          
+                                while ($row = mysqli_fetch_assoc($rs_name))
+                                {
+                                $rows[] = $row;
+                                }
+
+                                $result="select * from level";
+                                $rs_name = $conn->query($result);                                          
+                                while ($row1 = mysqli_fetch_assoc($rs_name))
+                                {
+                                $rows1[] = $row1;
+                                }
                                 if (isset($_POST["ok"])) {
-                                    $User_course = $_POST["User_course"];
-                                    $Course_Name = $_POST["Course_Name"];
-                                    $User_teacher=$_POST["User_teacher"];
-                                    $Nd_baiviet = $_POST["Nd_baiviet"];
-                                    $Document = $_POST["Document"];
-                                    $Price = $_POST["Price"];
-                                    $image =basename( $_FILES["image"]["name"]);    
+                                    $User_teacher = $_POST["User_teacher"];
+                                    $User_TypeOfCourse = $_POST["User_TypeOfCourse"];
+                                    $User_level=$_POST["User_level"];
+                                    $Teacher_name = $_POST["Teacher_name"];
+                                    $Phone_number = $_POST["Phone_number"];
+                                    $Email = $_POST["Email"];  
+                                    $Describee = $_POST["Describee"];
+                                    $image =basename( $_FILES["image"]["name"]);   
                                     if (!$conn) {
                                         echo"Lỗi kết nối tới cơ sở dữ liệu";
                                     }
-                                    echo 'string'. $User_course."-".$Course_Name."-".$User_teacher." ".$Nd_baiviet." ".$image."  ".$Document;
-
-                                    
-                                    $sql=  "  INSERT INTO `course`(`User_course`, `User_teacher`, `User_Sale`, `User_Activated`, `Course_Name`, `Nd_baiviet`, `Price`, `Images`,`Document`) 
-                                    VALUES ('".$User_course."','".$User_teacher."','','','".$Course_Name."','".$Nd_baiviet."','".$Price."','".$image."','".$Document."') "; 
-                                    $stmt  = $conn->query($sql);                                                                
+                                    echo 'string'. $User_teacher."-".$User_TypeOfCourse."-".$User_level." ".$Teacher_name." ".$Phone_number."  ".$Email." ".$Describee." ".$image;
+                                    $sql="INSERT INTO `teacher`(`User_teacher`, `User_TypeOfCourse`, `Teacher_name`, `Phone_number`, `Email`, `Teacher_image`, `Describee`, `User_level`) 
+                                    VALUES ('".$User_teacher."','".$User_TypeOfCourse."','".$Teacher_name."','".$Phone_number."','".$Email."','".$image."','".$Describee."','".$User_level."')";
+                                    $stmt  = $conn->query($sql);
+                                    var_dump($stmt);
                                     move_uploaded_file($_FILES["image"]["tmp_name"],"../../images/$image");
                                 }
-                                ?>
+                                ?> 
                                 <div class="panel-body">
-                                    <form method="post" action="Add_Course.php" enctype="multipart/form-data">
+                                    <form method="post" action="Add_Teacher.php" enctype="multipart/form-data">
                                         <fieldset>
-                                            <label>Mã khóa học:</label>
-                                            <input type="text" name="User_course" value="" placeholder="Mã khóa học " style="margin-left: 2em;width: 20em;" >
+                                            <label>Mã giảng viên:</label>
+                                            <input type="text" name="User_teacher" value="" placeholder="Mã giảng viên " style="margin-left: 2em;width: 20em;" >
                                         </fieldset>
                                         <fieldset>
-                                            <label>Tên khóa học:</label>
-                                            <input type="text" name="Course_Name" value="" placeholder="Tên khóa học" style="    margin-left: 1.6em;width: 20em;">
-                                        </fieldset>
-                                        <fieldset>
-                                            <label>Giảng viên:</label>
-                                            <select style="margin-left: 2.8em;width: 20em;height: 2em;" name="User_teacher">
+                                            <label>Loại khóa học:</label>
+                                            <select style="margin-left: 1.8em;width: 20em;height: 2em;" name="User_TypeOfCourse">
                                                 <?php foreach ($rows as $key => $value) {
-                                                    echo '<option value="'.$value["User_teacher"].'" >'.$value["Teacher_name"].'</option>';
+                                                    echo '<option value="'.$value["User_TypeOfCourse"].'" >'.$value["Name_TypeOfCourse"].'</option>';
                                                   }
                                                    ?> 
                                             </select>
                                         </fieldset>
+                                        <fieldset>
+                                            <label>Trường đại học:</label>
+                                            <select style="margin-left: 1em;width: 20em;height: 2em;" name="User_level">
+                                                <?php foreach ($rows1 as $key => $value) {
+                                                    echo '<option value="'.$value["User_level"].'" >'.$value["Lavel_Name"].'</option>';
+                                                  }
+                                                   ?> 
+                                            </select>
+                                        </fieldset>                              
                                          <fieldset>
-                                            <label>Nội dung bài viết:</label>
-                                            <textarea rows="5" cols="37" name="Nd_baiviet" placeholder="Nôi dung bài viết " style="margin-bottom: 15px;"></textarea>
+                                            <label>Tên giảng viên:</label>
+                                            <input type="text" name="Teacher_name" value="" placeholder="Tên giảng viên" style="    margin-left: 1.6em;width: 20em;">
                                         </fieldset>
                                         <fieldset>
-                                            <label>Nội dung miêu tả:</label>
-                                            <textarea rows="5" cols="37" name="Document"placeholder="Nội dung mô tả ngắn"style="margin-bottom: 15px;"></textarea>
+                                            <label>Số điện thoại:</label>
+                                            <input type="text" name="Phone_number" value="" placeholder="Số điện thoại" style="    margin-left: 2.4em;width: 20em;">
                                         </fieldset>
                                         <fieldset>
-                                            <label>Giá:</label>
-                                            <input type="text" name="Price" value="" placeholder="Giá " style="width: 20em;margin-left: 6.5em;">
+                                            <label>Email:</label>
+                                            <input type="text" name="Email" value="" placeholder="Email" style="    margin-left: 6em;width: 20em;">
                                         </fieldset>
-                                       
-                                            <label>Hình ảnh:</label>
-                                             <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 11.8em">
-                                                <legend></legend>
-                                            <input type="file" name="image" style="margin-bottom: 15px;margin-left: 15px;">
+                                        <fieldset>
+                                            <label>Mô tả:</label>
+                                            <input type="text" name="Describee" value="" placeholder="Mô tả " style="width: 20em;margin-left: 6em;">
                                         </fieldset>
+                                        <label>Hình ảnh:</label>
+                                         <fieldset  style="border: 1px solid #80808026; width: 20em; margin-left: 12em">
+                                            <legend></legend>
+                                        <input type="file" name="image" style="margin-bottom: 15px;margin-left: 15px;">
+                                        </fieldset>
+                                        
+                                      
+                                            
                                         <button type="submit" name="ok"> Lưu</button>
                                     </form>
                                    

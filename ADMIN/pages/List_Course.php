@@ -56,6 +56,7 @@ require 'Header.php';
                                                     <th> Document</th>                                 
                                                     <th>Edit</th>
                                                     <th> Delete</th>
+                                                    <th>Add to cart</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -79,7 +80,8 @@ require 'Header.php';
                                                   echo"<td>".$row['Images']."</td>";
                                                   echo"<td>".$row['Document']."</td>";
                                                   echo"<td><a href='Edit_Course.php?User_course=$row[User_course]'>Edit</a></td>";
-                                                  echo"<th><a href='Delete_Course.php?User_course=$row[User_course] 'onclick='return show_confirm();' style='color:#f3f;'>Delete</a></th>";         
+                                                  echo"<th><a href='Delete_Course.php?User_course=$row[User_course] 'onclick='return show_confirm();' sle='color:#f3f;'>Delete</a></th>";
+                                                  echo"<th><a href='Delete_Course.php?User_course=$row[User_course] 'onclick='return show_confirm();' sle='color:#f3f;'>Add to cart</a></th>";         
                                                   echo"</tr>";                                 
                                                 }
                                                 mysqli_close($conn);  

@@ -10,7 +10,7 @@ echo"Lỗi kết nối tới cơ sở dữ liệu";
 
 //thuc hien truy van 
 
-$sql = "delete from admin where User_Name=$User_Name";
+$sql = "delete from admin where User_Name='$User_Name'";
 $retval = mysqli_query( $conn ,$sql);
 
 echo "Xóa dữ liệu thành công\n";

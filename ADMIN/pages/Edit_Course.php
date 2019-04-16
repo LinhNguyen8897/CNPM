@@ -116,13 +116,14 @@ require '../pages/config.php';
                                         }
 
 
-                                        if (empty($_POST["images"])) {
-                                             $loi["images"]= "vui long nhap anh";
-                                         }
-                                         else {
-                                            $Price=$_POST["images"];
-                                        }
-                                        echo 'string'. $User_course."-".$Course_Name."-".$User_teacher." ".$User_Sale." ".$User_Activated."  ".$Nd_baiviet." ".$Document." ".$Price." ".$images;
+                                        // if (empty($_POST["images"])) {
+                                        //      $loi["images"]= "vui long nhap anh";
+                                        //  }
+                                        //  else {
+                                        //     $images=$_POST["images"];
+                                        // }
+                                        
+                                         $images =basename( $_FILES["images"]["name"]); 
 
                                         if ($User_course && $User_teacher && $User_Sale && $User_Activated && $Course_Name  && $Nd_baiviet  && $Price &&   $images && $Document ) {
 
@@ -131,10 +132,11 @@ require '../pages/config.php';
                                                   echo"Lỗi kết nối tới cơ sở dữ liệu";
                                             } 
                                             //truy van
-                                            if($image=='none'){
-                                                $sql="UPDATE `course` SET `User_course`='$User_course',`User_teacher`='$User_teacher',`User_Sale`='$User_Sale',`User_Activated`='$User_Activated',`Course_Name`='$User_course',`Nd_baiviet`='$Nd_baiviet',`Price`='$Price',`Images`='$images',`Document`='$Document' WHERE  User_course='$User_course'";
+                                            if($images=='none'){
+                                                $sql="UPDATE `course` SET `User_course'='$User_course',`User_teacher`='$User_teacher',`User_Sale`='$User_Sale',`User_Activated`='$User_Activated',`Course_Name`='$User_course',`Nd_baiviet`='$Nd_baiviet',`Price`='$Price',`Images`='$images',`Document`='$Document' WHERE  User_course='$User_course'";
+                                                echo ($sql);     
                                                 $rs_name = $conn->query($sql);
-                                                var_dump($rs_name);     
+                                                
                                                 }
                                             else 
                                             {
@@ -218,7 +220,7 @@ require '../pages/config.php';
                                                 <legend></legend>
                                             <input type="file" multiple="" name="images" style="margin-bottom: 15px;margin-left: 15px;">
                                         </fieldset>
-                                        <button type="submit" name="ok"> Lưu</button>
+                                        <button type="submit" name="ok" style="   margin-top: 0.1em; float: left;margin-left: 27px;background: white;padding: 12px;" > Lưu</button>
                                     </form>
                                    
                               </div>

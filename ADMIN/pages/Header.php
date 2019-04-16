@@ -155,7 +155,7 @@
                                         <a href="../pages/Add_Teacher.php">Add Teacher</a>
                                     </li>
                                     <li>
-                                        <a href="../pages/Add_Customer.php">Edit Customer</a>
+                                        <a href="../pages/Edit_Teacher.php">Edit Customer</a>
                                     </li>
                                    <!--  <li>
                                         <a href="#">Third Level <span class="fa arrow"></span></a>
@@ -194,7 +194,7 @@
                                 <a href="#"><i class="fa fa-money-bill-alt"></i> Hóa đơn<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="blank.html">Blank Page</a>
+                                        <a href="../pages/Gio_hang.php">Giỏ hàng</a>
                                     </li>
                                     <li>
                                         <a href="login.html">Login Page</a>

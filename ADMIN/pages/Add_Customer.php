@@ -96,7 +96,7 @@ require '../pages/config.php';
                                             <textarea rows="5" cols="37" name="Describe" placeholder="Mô tả chi tiết... " style="margin-bottom: 15px;margin-left: 6.8em;"></textarea>
                                         </fieldset>
                                             
-                                        <button type="submit" name="ok"> Lưu</button>
+                                        <button type="submit" name="ok" style="   margin-top: 0.1em; float: left;margin-left: 27px;background: white;padding: 12px;" > Lưu</button>
                                     </form>
                                    
                               </div>

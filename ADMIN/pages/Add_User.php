@@ -83,7 +83,7 @@ require '../pages/config.php';
                                             <label>Lavel:</label>
                                             <input type="text" name="Level" value="" placeholder="lavel " style="width: 20em;margin-left: 6.6em;">
                                         </fieldset>
-                                        <button type="submit" name="ok"> Lưu</button>
+                                        <button type="submit" name="ok" style="   margin-top: 0.1em; float: left;margin-left: 27px;background: white;padding: 12px;" > Lưu</button>
                                     </form>
                                    
                               </div>

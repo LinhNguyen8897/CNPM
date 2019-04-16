@@ -104,7 +104,7 @@ require '../pages/config.php';
                                                 <legend></legend>
                                             <input type="file" name="image" style="margin-bottom: 15px;margin-left: 15px;">
                                         </fieldset>
-                                        <button type="submit" name="ok"> Lưu</button>
+                                        <button type="submit" name="ok" style="   margin-top: 0.1em; float: left;margin-left: 27px;background: white;padding: 12px;" > Lưu</button>
                                     </form>
                                    
                               </div>

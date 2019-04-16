@@ -73,7 +73,7 @@ require 'Header.php';
                                                   echo"<td>".$row['Teacher_image']."</td>";
                                                   echo"<td>".$row['Describee']."</td>";
                                                   echo"<td>".$row['User_level']."</td>";
-                                                  echo"<td><a href='Edit_Course.php?User_teacher=$row[User_teacher]'>Edit</a></td>";
+                                                  echo"<td><a href='Edit_Teacher.php?User_teacher=$row[User_teacher]'>Edit</a></td>";
                                                   echo"<th><a href='Delete_Teacher.php?User_teacher=$row[User_teacher] 'onclick='return show_confirm();' style='color:#f3f;'>Delete</a></th>";         
                                                   echo"</tr>";                                 
                                                 }

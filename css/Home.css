@@ -47,7 +47,8 @@ div#so1 {position: relative;width: 100%;height: 600px;overflow: hidden;box-shado
 
 .tong_khoi_gt {display: flex;flex-wrap: wrap;justify-content: space-between;}
 .khoigt .khoi_gt:nth-child(4n+4) {margin-right: 0;}
-.khoi_gt .nd_khoi {position: absolute;top: 40%;left: 0;z-index: 3;width: 100%;text-align: center;color: black;font-family: lato_r;font-size: 30px;
+.khoi_gt .nd_khoi {position: absolute;top: 40%;left: 0;z-index: 3;width: 100%;
+	text-align: center;color: black;font-family: lato_r;font-size: 30px;
 text-transform: uppercase;opacity: 0;transition: 0.5s;transform: scale(0.5);}
 .khoi_gt:hover .nd_khoi {opacity: 1;transform: scale(1);}
 div#so2 {width: 100%;height: 300px;padding-top: 20px;overflow: hidden;}

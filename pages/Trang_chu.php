@@ -287,9 +287,32 @@ require 'Header.php';
                  <div class="u-top-teacher">
                      <h4>GIẢNG VIÊN TIÊU BIỂU</h4>
                      <div class="box-teacher slick-initialized slick-slider">
-                        <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+                        <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" >Previous</button>
+                                 <?php
+                           require '../ADMIN/pages/config.php';
+                           $result=mysqli_query($conn,"SELECT `Teacher_name`, `Teacher_image` FROM `teacher` order by User_teacher desc limit 4");
+                           while($data=mysqli_fetch_assoc($result))
+                           {
+                            echo"<div class='slick-list draggable'  aria-live='polite'>";
+                                echo" <div class='slick-track' style='opacity: 1; width: 4275px; left: -1140px;' role='listbox'>";
+                                      echo"<div class='nner-box-teacher slick-slide slick-cloned' data-slick-index='-4' aria-hidden='true' style='width: 269px;margin: 0 0.5em' tabindex='-1'>";
+                                            echo"<div class='inner-box-teacher slick-slide slick-cloned' data-slick-index='-4' aria-hidden='true' style='width: 269px;' tabindex='-1'>";
+                                                      echo"<div class='img-teacher'>";
+                                                         echo" <img width='153px' height='153px' 
+                                                         src='../images/".$data['Teacher_image']."' alt=''>";
+                                                      echo"</div>";
+                                                      echo"<a href='' class='name-teacher' tabindex='-1'>$data[Teacher_name]</a>";
+                                                      echo"<div class='des-teacher'>Luật sư - Diễn giả</div>";
+                                      echo"</div>";
+                                echo"</div>";
+                                        //<!-- slick-track -->
+                            echo"</div>";
+                                //<!-- slick-list draggable -->
+                           }
+                        ?>
                                 <div class="slick-list draggable"  aria-live="polite">
-                                         <div class="slick-track" style="opacity: 1; width: 4275px; left: -1140px;" role="listbox"><div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
+                                        <div class="slick-track" style="opacity: 1; width: 4275px; left: -1140px;" role="listbox">
+                                          <div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
                                             <div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
                                                 <div class="img-teacher">
                                                     <img width="153px" height="153px" src="../images/gv1.jpg" alt="Phạm Thành Long">
@@ -321,40 +344,7 @@ require 'Header.php';
                                             </div>
                                         </div><!-- slick-track -->
                                 </div><!-- slick-list draggable -->
-                                <div class="slick-list draggable"  aria-live="polite">
-                                         <div class="slick-track" style="opacity: 1; width: 4275px; left: -1140px;" role="listbox"><div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
-                                            <div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
-                                                <div class="img-teacher">
-                                                    <img width="153px" height="153px" src="../images/gv1.jpg" alt="Phạm Thành Long">
-                                                </div>
-                                                <a href="/teacher/pham-thanh-long" class="name-teacher" tabindex="-1">Phạm Thành Long</a>
-                                                <div class="des-teacher">Luật sư - Diễn giả</div>
-                                            </div>
-                                        </div><!-- slick-track -->
-                                </div><!-- slick-list draggable -->
-                                <div class="slick-list draggable"  aria-live="polite">
-                                         <div class="slick-track" style="opacity: 1; width: 4275px; left: -1140px;" role="listbox"><div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
-                                            <div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
-                                                <div class="img-teacher">
-                                                    <img width="153px" height="153px" src="../images/gv1.jpg" alt="Phạm Thành Long">
-                                                </div>
-                                                <a href="/teacher/pham-thanh-long" class="name-teacher" tabindex="-1">Phạm Thành Long</a>
-                                                <div class="des-teacher">Luật sư - Diễn giả</div>
-                                            </div>
-                                        </div><!-- slick-track -->
-                                </div><!-- slick-list draggable -->
-                                <div class="slick-list draggable"  aria-live="polite">
-                                         <div class="slick-track" style="opacity: 1; width: 4275px; left: -1140px;" role="listbox"><div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
-                                            <div class="inner-box-teacher slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 269px;" tabindex="-1">
-                                                <div class="img-teacher">
-                                                    <img width="153px" height="153px" src="../images/gv1.jpg" alt="Phạm Thành Long">
-                                                </div>
-                                                <a href="/teacher/pham-thanh-long" class="name-teacher" tabindex="-1">Phạm Thành Long</a>
-                                                <div class="des-teacher">Luật sư - Diễn giả</div>
-                                            </div>
-                                        </div><!-- slick-track -->
-                                </div><!-- slick-list draggable -->
-
+                               
                          <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button>
                          
                     </div><!-- box-teacher slick-initialized slick-slider-->

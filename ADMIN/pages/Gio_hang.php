@@ -1,4 +1,57 @@
-
+<?php
+require '../pages/config.php';
+session_start();
+if(isset($_POST["add_to_cart"]))  
+ {  
+      if(isset($_SESSION["shopping_cart"]))  
+      {  
+           $item_array_User_course = array_column($_SESSION["shopping_cart"], "User_course");  
+           if(!in_array($_GET["User_course"], $item_array_User_course))  
+           {  
+                $count = count($_SESSION["shopping_cart"]);  
+                $item_array = array(  
+                     'User_course'  =>$_GET["User_course"],  
+                     'Course_Name'=> $_POST["Course_Name"],
+                     'Images'=> $_POST["Images"],  
+                     'Price' =>  $_POST["Price"],  
+                   
+                );  
+                $_SESSION["shopping_cart"][$count] = $item_array;  
+           }  
+           else  
+           {  
+                echo '<script>alert("Bạn có chắc chắn muốn xóa khóa học!")</script>';  
+                echo '<script>window.location="Gio_hang.php"</script>';  
+           }  
+      }  
+      else  
+      {  
+            $item_array = array(  
+                'User_course'=>$_GET["User_course"],  
+                'Course_Name'=> $_POST["Course_Name"],
+                'Images'=> $_POST["Images"],  
+                'Price'=>$_POST["Price"],  
+               
+           );  
+           $_SESSION["shopping_cart"][0] = $item_array;  
+      }  
+ }  
+ if(isset($_GET["action"]))  
+ {  
+      if($_GET["action"] == "delete")  
+      {  
+          foreach($_SESSION["shopping_cart"] as $keys => $values)  
+            {    
+                if($values["User_course"] == $_GET["User_course"])  
+                {  
+                     unset($_SESSION["shopping_cart"][$keys]);  
+                     echo '<script>alert("Bạn có chắc chắn muốn xóa khóa học!")</script>';  
+                     echo '<script>window.location="Gio_hang.php"</script>';  
+                }  
+          }  
+      }  
+ }  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +70,10 @@
 <link rel="stylesheet" type="text/css" href="../css/Gio_hang.css">
 </head>
 <body>
+
 <?php
 require 'Header.php';
-require '../pages/config.php';
 ?>
-
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-12">
@@ -29,7 +81,7 @@ require '../pages/config.php';
                 <div class="panel-heading" >
                  <div class="them_customer" style="   margin-top: 0.1em; float: right;margin-left: 27px;background: white;padding: 12px;" > 
                         <a href="../pages/index.php" style="color: black; text-decoration: none;"><i class="fa fa-arrow-left"></i>Trở về</a> </div>
-                   <p class="customer" style=" margin: 8px 0 10px;    font-size: 19px;color: royalblue;">Khóa</p>
+                   <p class="customer" style=" margin: 8px 0 10px;    font-size: 19px;color: royalblue;">Giỏ hàng</p>
                 </div>
                 
                 <!-- /.panel-heading -->
@@ -46,11 +98,12 @@ require '../pages/config.php';
                     <form method="POST" action="Gio_hang.php?User_course=<?php echo $row["User_course"]?>"  enctype="multipart/form-data">
                         <div class="khoitq">
                             <div class="tatca">
-                                <img src="../../images/<?php  echo $row["Images"];?>" class="image">
+                                <img src="../../images/<?php  echo $row["Images"];?>" class="image" >
                                 <h4 class="NameCourse"><?php echo $row["Course_Name"]; ?></h4>
                                 <h4 class="Price"> $ <?php echo $row["Price"]; ?></h4>
-                               <input type="hidden" name="hidden_name" value="<?php echo $row["Course_Name"]; ?>" />  
-                               <input type="hidden" name="hidden_price" value="<?php echo $row["Price"]; ?>" />  
+                               <input type="hidden" name="Course_Name" value="<?php echo $row["Course_Name"]; ?>" />  
+                                <input type="hidden" name="Images" value="<?php echo $row["Images"]; ?>"/>
+                               <input type="hidden" name="Price" value="<?php echo $row["Price"]; ?>" />  
                                <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
                             </div>
                         </div>
@@ -61,16 +114,43 @@ require '../pages/config.php';
                     ?>
                      <div class="table-responsive">
                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                            <thead>
+                            <thead >
                                 <tr>
-                                    <th>Course Name</th>                                       
+                                    <th>Course_Name</th>
+                                    <th>Images</th>                                        
                                     <th>Price</th>                                
                                     <th>Total</th> 
                                     <th> Action</th>                                                   
                                 </tr>
                             </thead>
                             <tbody>
-                                                                
+                           <?php   
+                              if(!empty($_SESSION["shopping_cart"]))  
+                              {  
+                                   $total = 0;  
+                                   foreach($_SESSION["shopping_cart"] as $keys => $values)  
+                                   {  
+                              ?>  
+                               <tr>  
+                                   <td><?php echo $values["Course_Name"]; ?></td>  
+                                   <td><img style="width: 5em;height: 5em" src="../../images/<?php  echo $values["Images"];?>" ></td> 
+                                   <td>$ <?php echo $values["Price"]; ?></td>  
+                                   <td>$ <?php echo number_format($values["Price"], 2); ?></td>  
+                                   <td><a href="Gio_hang.php?action=delete&User_course=<?php echo $values["User_course"]; ?>"><span class="text-danger">Remove</span></a></td>  
+                              </tr>  
+                              <?php  
+                                        //$total = $total + ($values["Price"] * $values["Price"]);
+                                        $total = $total + ($values["Price"]);  
+                                   }  
+                              ?>  
+                              <tr>  
+                                   <td colspan="3" align="right">Total</td>  
+                                   <td align="right">$ <?php echo number_format($total, 2); ?></td>  
+                                   <td></td>
+                              </tr>  
+                              <?php  
+                              }  
+                              ?>                                 
                             </tbody>
                         </table>
                     </div>

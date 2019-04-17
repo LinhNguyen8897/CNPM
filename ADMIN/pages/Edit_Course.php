@@ -133,14 +133,14 @@ require '../pages/config.php';
                                             } 
                                             //truy van
                                             if($images=='none'){
-                                                $sql="UPDATE `course` SET `User_course'='$User_course',`User_teacher`='$User_teacher',`User_Sale`='$User_Sale',`User_Activated`='$User_Activated',`Course_Name`='$User_course',`Nd_baiviet`='$Nd_baiviet',`Price`='$Price',`Images`='$images',`Document`='$Document' WHERE  User_course='$User_course'";
+                                                $sql="UPDATE `course` SET `User_course'='$User_course',`User_teacher`='$User_teacher',`User_Sale`='$User_Sale',`User_Activated`='$User_Activated',`Course_Name`='$Course_Name',`Nd_baiviet`='$Nd_baiviet',`Price`='$Price',`Images`='$images',`Document`='$Document' WHERE  User_course='$User_course'";
                                                 echo ($sql);     
                                                 $rs_name = $conn->query($sql);
                                                 
                                                 }
                                             else 
                                             {
-                                                $sql="UPDATE `course` SET `User_course`='$User_course',`User_teacher`='$User_teacher',`User_Sale`='$User_Sale',`User_Activated`='$User_Activated',`Course_Name`='$User_course',`Nd_baiviet`='$Nd_baiviet',`Price`='$Price',`Images`='$images',`Document`='$Document' WHERE  User_course='$User_course'";
+                                                $sql="UPDATE `course` SET `User_course`='$User_course',`User_teacher`='$User_teacher',`User_Sale`='$User_Sale',`User_Activated`='$User_Activated',`Course_Name`='$Course_Name',`Nd_baiviet`='$Nd_baiviet',`Price`='$Price',`Images`='$images',`Document`='$Document' WHERE  User_course='$User_course'";
                                                  $rs_name = $conn->query($sql);
                                                  var_dump($rs_name);                                                   
                                                 move_uploaded_file($_FILES["images"]["tmp_name"],"../../images/".$_FILES["images"]["name"]);

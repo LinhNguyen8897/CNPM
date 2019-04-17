@@ -197,7 +197,7 @@
                                         <a href="../pages/Gio_hang.php">Giỏ hàng</a>
                                     </li>
                                     <li>
-                                        <a href="login.html">Login Page</a>
+                                        <a href="../pages/Thanh_toan.php">Thanh toán</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->

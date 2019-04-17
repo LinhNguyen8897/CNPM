@@ -147,9 +147,56 @@ require 'Header.php';
              <h1 class="td_sp">Tất cả</h1>
 
              <div class="sanpham">
+              <?php
+               $s=0.1;
+               require '../ADMIN/pages/config.php';
+               $result=mysqli_query($conn,"SELECT `Course_Name`, `Price`, `Images` FROM `course` order by User_course desc limit 4");
+               while($data=mysqli_fetch_assoc($result))
+               {
+                echo "<a href='Ct_Khoahoc.php'>";
+                echo "<div class='khoi_sp kinang  wow zoomIn' data-wow-delay='$s'>";
+                 echo " <img src='../images/".$data['Images']."'class='anh_sp'>";
+                      echo"<div class='nen-sp'>";
+                          
+                      echo"</div>";
+                      //<!-- nen-sp -->
+                     echo" <div class='khoi_ic'>";
+                        echo"  <ul>";
+                             echo" <li><a href='#' class='icon'><i class='fa fa-heart'></i></a></li>";
+                              echo"<li><a href='#' class='icon'><i class='fa fa-search'></i></a></li>";
+                              echo"<li> <a href='../pages/Cart.php' class='icon'><i class='fa fa-cart-plus'></i></a></li>";
+                          echo"</ul>";
+                      echo"</div>";
+                      //<!-- khoi_ic -->
+                      echo"<div class='content-course'>";
+                          echo"<h3 class='tensp'>$data[Course_Name]</h3>";
+                          echo"<div class='content-gv'>";
+                              echo"<img src='../images/gv1.jpg' class='img-gv'>";
+                              echo"<span class='ten-gv'>Hồ Văn Cương</span>";
+                          echo"</div>";
+                          echo"<div class='evaluate'>";
+                              echo"<span class='rate-course'>";
+                                  echo"<i class='fa fa-star co-or' aria-hidden='true'></i>";
+                                  echo"<i class='fa fa-star co-or' aria-hidden='true'></i>";
+                                  echo"<i class='fa fa-star co-or' aria-hidden='true'></i>";
+                                  echo"<i class='fa fa-star co-or' aria-hidden='true'></i>";
+                                  echo" <i class='fa fa-star co-or' aria-hidden='true'></i>";
+                              echo"</span>";
+                              echo"<span class='n-rate'>(250)</span>";
+                          echo"</div>";
+                          echo"<div class='price'>";
+                              echo"<del class='sale-price'>$300.000 đ</del>";
+                              echo"<span class='price-sale'style='margin-left: 5em'>$data[Price].đ</span>";
+                          echo"</div>";
+                      echo"</div>";
+                  echo"</div>";
+                  echo"</a>"; 
+                $s++;
+               }
+              ?>
                  <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
                       <img src="../images/kn3.jpeg" class="anh_sp">
-                      <div class="nen-sp">
+                      <div class="nen-sp" >
                           
                       </div><!-- nen-sp -->
                       <div class="khoi_ic">
@@ -180,7 +227,7 @@ require 'Header.php';
                               <span class="price-sale">250.000đ</span>
                           </div>
                       </div>
-                 </div><!-- khoi_sp --> 
+                  </div><!-- khoi_sp --> 
                  <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
                       <img src="../images/kn3.jpeg" class="anh_sp">
                       <div class="nen-sp">
@@ -210,147 +257,15 @@ require 'Header.php';
                               <span class="n-rate">(250)</span>
                           </div>
                           <div class="price">
-                              <del class="sale-price">$300.000 đ</del>
+                              <del class="sale-price" >$300.000 đ</del>
                               <span class="price-sale">250.000đ</span>
-                          </div>
-                      </div>
-                 </div><!-- khoi_sp -->    
-                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
-                      <img src="../images/kn3.jpeg" class="anh_sp">
-                      <div class="nen-sp">
-                          
-                      </div><!-- nen-sp -->
-                      <div class="khoi_ic">
-                          <ul>
-                              <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
-                              <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
-                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
-                          </ul>
-                      </div><!-- khoi_ic -->
-                      <div class="content-course">
-                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
-                          <div class="content-gv">
-                              <img src="../images/gv1.jpg" class="img-gv">
-                              <span class="ten-gv">Hồ Văn Cương</span>
-                          </div>
-                          <div class="evaluate">
-                              <span class="rate-course">
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                              </span>
-                              <span class="n-rate">(250)</span>
-                          </div>
-                          <div class="price">
-                              <del class="sale-price">$300.000 đ</del>
-                              <span class="price-sale">250.000đ</span>
-                          </div>
-                      </div>
-                 </div><!-- khoi_sp -->    
-                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
-                      <img src="../images/kn3.jpeg" class="anh_sp">
-                      <div class="nen-sp">
-                          
-                      </div><!-- nen-sp -->
-                      <div class="khoi_ic">
-                          <ul>
-                              <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
-                              <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
-                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
-                          </ul>
-                      </div><!-- khoi_ic -->
-                      <div class="content-course">
-                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
-                          <div class="content-gv">
-                              <img src="../images/gv1.jpg" class="img-gv">
-                              <span class="ten-gv">Hồ Văn Cương</span>
-                          </div>
-                          <div class="evaluate">
-                              <span class="rate-course">
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                              </span>
-                              <span class="n-rate">(250)</span>
-                          </div>
-                          <div class="price">
-                              <del class="sale-price">$300.000 đ</del>
-                              <span class="price-sale">250.000đ</span>
-                          </div>
-                      </div>
-                 </div><!-- khoi_sp -->  
-                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
-                      <img src="../images/kn3.jpeg" class="anh_sp">
-                      <div class="nen-sp">
-                          
-                      </div><!-- nen-sp -->
-                      <div class="khoi_ic">
-                          <ul>
-                              <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
-                              <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
-                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
-                          </ul>
-                      </div><!-- khoi_ic -->
-                      <div class="content-course">
-                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
-                          <div class="content-gv">
-                              <img src="../images/gv1.jpg" class="img-gv">
-                              <span class="ten-gv">Hồ Văn Cương</span>
-                          </div>
-                          <div class="evaluate">
-                              <span class="rate-course">
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                              </span>
-                              <span class="n-rate">(250)</span>
-                          </div>
-                          <div class="price">
-                              <del class="sale-price">$300.000 đ</del>
-                              <span class="price-sale">250.000đ</span>
-                          </div>
+                          </div >
                       </div>
                  </div><!-- khoi_sp -->    
-                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
-                      <img src="../images/kn3.jpeg" class="anh_sp">
-                      <div class="nen-sp">
-                          
-                      </div><!-- nen-sp -->
-                      <div class="khoi_ic">
-                          <ul>
-                              <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
-                              <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
-                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
-                          </ul>
-                      </div><!-- khoi_ic -->
-                      <div class="content-course">
-                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
-                          <div class="content-gv">
-                              <img src="../images/gv1.jpg" class="img-gv">
-                              <span class="ten-gv">Hồ Văn Cương</span>
-                          </div>
-                          <div class="evaluate">
-                              <span class="rate-course">
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                                  <i class="fa fa-star co-or" aria-hidden="true"></i>
-                              </span>
-                              <span class="n-rate">(250)</span>
-                          </div>
-                          <div class="price">
-                              <del class="sale-price">$300.000 đ</del>
-                              <span class="price-sale">250.000đ</span>
-                          </div>
-                      </div>
-                 </div><!-- khoi_sp -->                 
+                 
+                 
+               
+                                   
              </div><!-- sanpham -->
         </div><!-- container -->
      </div><!--  khoikh  -->

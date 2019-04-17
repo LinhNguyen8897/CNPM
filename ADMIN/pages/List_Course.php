@@ -56,7 +56,6 @@ require 'Header.php';
                                                     <th> Document</th>                                 
                                                     <th>Edit</th>
                                                     <th> Delete</th>
-                                                    <th>Add to cart</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -67,7 +66,7 @@ require 'Header.php';
                                                 }
 
                                                 $result="select * from course";
-                                                $rs_name = $conn->query($result);                                          
+                                               $rs_name = $conn->query($result);                                          
                                                 while ($row = mysqli_fetch_assoc($rs_name))
                                                 {
                                                   echo"<tr>";

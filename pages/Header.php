@@ -34,7 +34,7 @@
             <div class="nav">
                 <ul>
                     <li>
-                        <a href="#so1">Trang chủ</a>
+                        <a href="Trang_chu.php">Trang chủ</a>
                     </li>
                     <li>
                         <a href="#so2">giới thiệu</a>

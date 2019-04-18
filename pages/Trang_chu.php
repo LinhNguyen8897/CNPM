@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="../css/Home.css">
+  <script type="text/javascript" src="../js/jquery.js"></script>
 </head>
 <body>
 
@@ -150,52 +151,13 @@ require 'Header.php';
               <?php
                $s=0.1;
                require '../ADMIN/pages/config.php';
-               $result=mysqli_query($conn,"SELECT `Course_Name`, `Price`, `Images` FROM `course` order by User_course desc limit 4");
+               $result=mysqli_query($conn,"SELECT `User_course` ,`Course_Name`, `Teacher_name`, `Price`, `Images` , `Teacher_image` FROM course INNER JOIN teacher ON course.User_teacher=teacher.User_teacher order by User_course ASC limit 4");
                while($data=mysqli_fetch_assoc($result))
                {
-                echo "<a href='Ct_Khoahoc.php'>";
-                echo "<div class='khoi_sp kinang  wow zoomIn' data-wow-delay='$s'>";
-                 echo " <img src='../images/".$data['Images']."'class='anh_sp'>";
-                      echo"<div class='nen-sp'>";
-                          
-                      echo"</div>";
-                      //<!-- nen-sp -->
-                     echo" <div class='khoi_ic'>";
-                        echo"  <ul>";
-                             echo" <li><a href='#' class='icon'><i class='fa fa-heart'></i></a></li>";
-                              echo"<li><a href='#' class='icon'><i class='fa fa-search'></i></a></li>";
-                              echo"<li> <a href='../pages/Cart.php' class='icon'><i class='fa fa-cart-plus'></i></a></li>";
-                          echo"</ul>";
-                      echo"</div>";
-                      //<!-- khoi_ic -->
-                      echo"<div class='content-course'>";
-                          echo"<h3 class='tensp'>$data[Course_Name]</h3>";
-                          echo"<div class='content-gv'>";
-                              echo"<img src='../images/gv1.jpg' class='img-gv'>";
-                              echo"<span class='ten-gv'>Hồ Văn Cương</span>";
-                          echo"</div>";
-                          echo"<div class='evaluate'>";
-                              echo"<span class='rate-course'>";
-                                  echo"<i class='fa fa-star co-or' aria-hidden='true'></i>";
-                                  echo"<i class='fa fa-star co-or' aria-hidden='true'></i>";
-                                  echo"<i class='fa fa-star co-or' aria-hidden='true'></i>";
-                                  echo"<i class='fa fa-star co-or' aria-hidden='true'></i>";
-                                  echo" <i class='fa fa-star co-or' aria-hidden='true'></i>";
-                              echo"</span>";
-                              echo"<span class='n-rate'>(250)</span>";
-                          echo"</div>";
-                          echo"<div class='price'>";
-                              echo"<del class='sale-price'>$300.000 đ</del>";
-                              echo"<span class='price-sale'style='margin-left: 5em'>$data[Price].đ</span>";
-                          echo"</div>";
-                      echo"</div>";
-                  echo"</div>";
-                  echo"</a>"; 
-                $s++;
-               }
-              ?>
-                 <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
-                      <img src="../images/kn3.jpeg" class="anh_sp">
+              
+                ?>
+                <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="$s" >
+                      <img src="../images/<?php echo $data['Images'];?>" class="anh_sp">
                       <div class="nen-sp" >
                           
                       </div><!-- nen-sp -->
@@ -203,14 +165,14 @@ require 'Header.php';
                           <ul>
                               <li><a href="" class="icon"><i class="fa fa-heart"></i></a></li>
                               <li><a href="" class="icon"><i class="fa fa-search"></i></a></li>
-                              <li> <a href="" class="icon"><i class="fa fa-cart-plus"></i></a></li>
+                              <li> <a  class="icon" id="addcart<?php echo $data['User_course']; ?>"><i class="fa fa-cart-plus"></i></a></li>
                           </ul>
                       </div><!-- khoi_ic -->
                       <div class="content-course">
-                          <h3 class="tensp">Anh văn gia tiếp cho người mất gốc ...</h3>
+                          <h3 class="tensp"><?php echo $data['Course_Name'];?></h3>
                           <div class="content-gv">
-                              <img src="../images/gv1.jpg" class="img-gv">
-                              <span class="ten-gv">Hồ Văn Cương</span>
+                              <img src="../images/<?php echo $data['Teacher_image']?>" class="img-gv"  style="border-radius: 50%;width: 37px;height: 37px;">
+                              <span class="ten-gv"><?php echo $data['Teacher_name']; ?></span>
                           </div>
                           <div class="evaluate">
                               <span class="rate-course">
@@ -224,10 +186,21 @@ require 'Header.php';
                           </div>
                           <div class="price">
                               <del class="sale-price">$300.000 đ</del>
-                              <span class="price-sale">250.000đ</span>
+                              <span class="price-sale" style="margin-left: 6em"><?php echo number_format($data['Price'],0,'.','.').'đ';?></span>
                           </div>
                       </div>
-                  </div><!-- khoi_sp --> 
+                  </div><!-- khoi_sp -->     
+                  <script type="text/javascript">
+                    $(document).ready(function(){
+                      $("a#addcart<?php echo $data['User_course'];?>").click(function(){
+                        alter('ok');
+                      });
+                    });
+                  </script>
+                <?php
+               }
+              ?>
+                 
                  <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="0.6s">
                       <img src="../images/kn3.jpeg" class="anh_sp">
                       <div class="nen-sp">
@@ -290,7 +263,7 @@ require 'Header.php';
                         <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" >Previous</button>
                                  <?php
                            require '../ADMIN/pages/config.php';
-                           $result=mysqli_query($conn,"SELECT `Teacher_name`, `Teacher_image` FROM `teacher` order by User_teacher desc limit 4");
+                           $result=mysqli_query($conn,"SELECT `User_teacher`, `Teacher_name`, `Teacher_image`, `Name_TypeOfCourse` FROM teacher INNER JOIN typeofcourse ON teacher.User_TypeOfCourse=typeofcourse.User_TypeOfCourse order by User_teacher desc limit 4");
                            while($data=mysqli_fetch_assoc($result))
                            {
                             echo"<div class='slick-list draggable'  aria-live='polite'>";
@@ -302,7 +275,7 @@ require 'Header.php';
                                                          src='../images/".$data['Teacher_image']."' alt=''>";
                                                       echo"</div>";
                                                       echo"<a href='' class='name-teacher' tabindex='-1'>$data[Teacher_name]</a>";
-                                                      echo"<div class='des-teacher'>Luật sư - Diễn giả</div>";
+                                                      echo"<div class='des-teacher'>$data[Name_TypeOfCourse]</div>";
                                       echo"</div>";
                                 echo"</div>";
                                         //<!-- slick-track -->

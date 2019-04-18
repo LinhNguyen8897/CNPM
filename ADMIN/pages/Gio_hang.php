@@ -21,7 +21,7 @@ if(isset($_POST["add_to_cart"]))
            }  
            else  
            {  
-                echo '<script>alert("Bạn có chắc chắn muốn xóa khóa học!")</script>';  
+                echo '<script>alert("Bạn đã có khóa học này rồi")</script>';  
                 echo '<script>window.location="Gio_hang.php"</script>';  
            }  
       }  
@@ -140,7 +140,7 @@ require 'Header.php';
                                    <td><?php echo $values["Course_Name"]; ?></td> 
                                     <td><?php echo $values["Teacher_name"]; ?></td>  
                                    <td><img style="width: 5em;height: 5em" src="../../images/<?php  echo $values["Images"];?>" ></td> 
-                                   <td>$ <?php echo $values["Price"]; ?></td>  
+                                   <td>$ <?php echo number_format($values["Price"],0,'.','.'); ?></td>  
                                    <td>$ <?php echo number_format($values["Price"], 2); ?></td>  
                                    <td><a href="Gio_hang.php?action=delete&User_course=<?php echo $values["User_course"]; ?>"><span class="text-danger">Remove</span></a></td>  
                               </tr>  
@@ -152,8 +152,7 @@ require 'Header.php';
                               <tr>  
                                    <td colspan="4" align="right">Total</td>  
                                    <td align="right">$ <?php echo number_format($total, 2); ?></td>  
-                                   <td></td>
-                                   <td></td>
+                                   <td> <a href="Thanh_toan.php"> Thanh toán</a></td>
                               </tr>  
                               <?php  
                               }  

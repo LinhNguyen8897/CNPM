@@ -12,6 +12,7 @@ if(isset($_POST["add_to_cart"]))
                 $item_array = array(  
                      'User_course'  =>$_GET["User_course"],  
                      'Course_Name'=> $_POST["Course_Name"],
+                    'Teacher_name'=> $_POST["Teacher_name"],
                      'Images'=> $_POST["Images"],  
                      'Price' =>  $_POST["Price"],  
                    
@@ -29,6 +30,7 @@ if(isset($_POST["add_to_cart"]))
             $item_array = array(  
                 'User_course'=>$_GET["User_course"],  
                 'Course_Name'=> $_POST["Course_Name"],
+                'Teacher_name'=> $_POST["Teacher_name"],
                 'Images'=> $_POST["Images"],  
                 'Price'=>$_POST["Price"],  
                
@@ -87,7 +89,7 @@ require 'Header.php';
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <?php  
-                        $query = "SELECT `User_course` ,`Course_Name`, `Price`, `Images` FROM `course` ORDER BY  User_course ASC";
+                        $query = "SELECT `User_course` ,`Course_Name`, `Teacher_name`, `Price`, `Images`  FROM course INNER JOIN teacher ON course.User_teacher=teacher.User_teacher ORDER BY  User_course ASC";
                          $rs_name = $conn->query($query); 
                         if(mysqli_num_rows($rs_name) > 0)  
                         {  
@@ -100,8 +102,10 @@ require 'Header.php';
                             <div class="tatca">
                                 <img src="../../images/<?php  echo $row["Images"];?>" class="image" >
                                 <h4 class="NameCourse"><?php echo $row["Course_Name"]; ?></h4>
+                                <h4 class="Teacher_name"><?php echo $row["Teacher_name"]; ?></h4>
                                 <h4 class="Price"> $ <?php echo $row["Price"]; ?></h4>
                                <input type="hidden" name="Course_Name" value="<?php echo $row["Course_Name"]; ?>" />  
+                                <input type="hidden" name="Teacher_name" value="<?php echo $row["Teacher_name"]; ?>" /> 
                                 <input type="hidden" name="Images" value="<?php echo $row["Images"]; ?>"/>
                                <input type="hidden" name="Price" value="<?php echo $row["Price"]; ?>" />  
                                <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
@@ -117,6 +121,7 @@ require 'Header.php';
                             <thead >
                                 <tr>
                                     <th>Course_Name</th>
+                                    <th>Teacher_name</th>
                                     <th>Images</th>                                        
                                     <th>Price</th>                                
                                     <th>Total</th> 
@@ -132,7 +137,8 @@ require 'Header.php';
                                    {  
                               ?>  
                                <tr>  
-                                   <td><?php echo $values["Course_Name"]; ?></td>  
+                                   <td><?php echo $values["Course_Name"]; ?></td> 
+                                    <td><?php echo $values["Teacher_name"]; ?></td>  
                                    <td><img style="width: 5em;height: 5em" src="../../images/<?php  echo $values["Images"];?>" ></td> 
                                    <td>$ <?php echo $values["Price"]; ?></td>  
                                    <td>$ <?php echo number_format($values["Price"], 2); ?></td>  
@@ -144,8 +150,9 @@ require 'Header.php';
                                    }  
                               ?>  
                               <tr>  
-                                   <td colspan="3" align="right">Total</td>  
+                                   <td colspan="4" align="right">Total</td>  
                                    <td align="right">$ <?php echo number_format($total, 2); ?></td>  
+                                   <td></td>
                                    <td></td>
                               </tr>  
                               <?php  

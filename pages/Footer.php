@@ -93,7 +93,7 @@
     <div class="copyright">
     &copy Học viện chúng tôi - Hệ thống đào tạo trực tuyến dành cho người đi làm - Cổng kết nối Chuyên gia với Học viên
 </div>
-<a href="" class="nutback"><i class="fas fa-arrow-up"></i></a>
+<!-- <a href="" class="nutback"><i class="fas fa-arrow-up"></i></a> -->
 </footer>
 </body>
 </html>

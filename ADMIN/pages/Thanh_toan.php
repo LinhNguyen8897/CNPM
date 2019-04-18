@@ -15,7 +15,6 @@
 <link href="../css/startmin.css" rel="stylesheet">
 <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
-<body>
 <?php
 require 'Header.php';
 require '../pages/config.php';

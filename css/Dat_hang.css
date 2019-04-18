@@ -49,11 +49,11 @@ h3.title:before {content: "";position: absolute;top: 50%;left: 40px;width: 240px
 h3.a.title:before {content: "";width: 0px;}
 
 /*******************
-PHAN BLOCK THỨ 1
+PHAN BLOCK THÃ¡Â»Â¨ 1
 *******************/
 .block1 {overflow: hidden;width: 1170px;position: absolute;left: 150%;margin-left: -585px;
     opacity: 0;visibility: hidden;transition: 0.5s;}
-.block1.show {opacity: 1;visibility: visible;left: 50%;}
+.block1.show {opacity: 1;visibility: visible;left: 53%;}
 a.btn {display: inline-block;position: absolute;z-index: 3;}
 a.btn.next{bottom: 0%; right: 30%}
 a.btn.prev{  bottom: 0%; left:30%;}
@@ -61,7 +61,7 @@ main#wrapper {padding: 1em calc(50% - 585px);height: 500px;position: relative;
     overflow: hidden;background: white;}
 
 /*******************
-PHAN BLOCK THỨ 2
+PHAN BLOCK THÃ¡Â»Â¨ 2
 *******************/
 .u-box-cart-title2 { font-size: 18px; font-weight: bold; margin-top: 20px;line-height: 10px }
 .u-box-cart-title2 span {font-size: 14px;font-weight: normal;line-height: 28px;}
@@ -86,7 +86,7 @@ button.btn.btn-success.btn-cl-or {  margin-top: -54px;}
 
 
 /*******************
-PHAN BLOCK THỨ 3
+PHAN BLOCK THÃ¡Â»Â¨ 3
 *******************/
 .cart-complete { margin: 20px 0;font-size: 16px; line-height: 30px;padding: 20px;}
 .cart-complete span { padding-left: 6.5em;}

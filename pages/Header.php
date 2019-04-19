@@ -1,3 +1,7 @@
+<?php
+session_start();
+require '../ADMIN/pages/config.php';
+?>
 <!-- home -->
 	<div class="home_page hidden-xs">
 		<div class="container-fluid">
@@ -16,9 +20,26 @@
 						<i class="fa fa-unlock-alt" aria-hidden="true"></i>
 						<p class="hidden-md hidden-xs hidden-sm">Kích hoạt khóa học</p>
 					</a>
-					<a href="" class="unica-cart">
+					<a href="../pages/Cartt.php" class="unica-cart">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
-						<span class="unica-sl-cart"><b>0</b></span>
+                        <?php
+                         $ok=1;
+                         if (isset($_SESSION["shopping_cart"])) {
+                            foreach ($_SESSION["shopping_cart"] as $key => $value) {
+                                if (isset($key)) {
+                                    $ok=2;
+                                }
+                            }
+                         }
+                         if ($ok!=2) {
+                             echo '0';
+                         }
+                         else {
+                             $item=$_SESSION["shopping_cart"];
+                             echo count($item);
+                         }
+                        ?>
+						<!-- <span class="unica-sl-cart"><b>0</b></span> -->
 					</a>
 					<ul class="unica-acc-zone">
                             <li><a class="unica-reg-acc" href="/register">Đăng ký</a></li>

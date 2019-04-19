@@ -188,7 +188,7 @@ require 'Header.php';
               </div>
               <div class="price">
                   <del class="sale-price">$300.000 đ</del>
-                  <span class="price-sale" style="margin-left: 6em"><?php echo number_format($data['Price'],0,'.','.').'đ';?></span>
+                  <span class="price-sale" style="margin-left: 6em"><?php echo number_format($data['Price'],3).'đ';?></span>
               </div>
           </div>
       </div><!-- khoi_sp -->     

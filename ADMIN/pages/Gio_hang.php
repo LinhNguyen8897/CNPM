@@ -62,7 +62,7 @@ if(isset($_POST["add_to_cart"]))
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-<title> Giỏ hang</title>
+<title> Giỏ hang Admin</title>
 <link href="../css/bootstrap.min.css" rel="stylesheet">
 <link href="../css/metisMenu.min.css" rel="stylesheet">
 <link href="../css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
@@ -140,8 +140,8 @@ require 'Header.php';
                                    <td><?php echo $values["Course_Name"]; ?></td> 
                                     <td><?php echo $values["Teacher_name"]; ?></td>  
                                    <td><img style="width: 5em;height: 5em" src="../../images/<?php  echo $values["Images"];?>" ></td> 
-                                   <td>$ <?php echo number_format($values["Price"],0,'.','.'); ?></td>  
-                                   <td>$ <?php echo number_format($values["Price"], 2); ?></td>  
+                                   <td>$ <?php echo number_format($values["Price"],3).'đ'; ?></td>  
+                                   <td>$ <?php echo number_format($values["Price"], 3).'đ'; ?></td>  
                                    <td><a href="Gio_hang.php?action=delete&User_course=<?php echo $values["User_course"]; ?>"><span class="text-danger">Remove</span></a></td>  
                               </tr>  
                               <?php  
@@ -151,7 +151,7 @@ require 'Header.php';
                               ?>  
                               <tr>  
                                    <td colspan="4" align="right">Total</td>  
-                                   <td align="right">$ <?php echo number_format($total, 2); ?></td>  
+                                   <td align="right">$ <?php echo number_format($total, 3).'đ'; ?></td>  
                                    <td> <a href="Thanh_toan.php"> Thanh toán</a></td>
                               </tr>  
                               <?php  

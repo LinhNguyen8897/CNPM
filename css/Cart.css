@@ -81,3 +81,11 @@ unica-order-cart
  .price-btn-box a {
     text-decoration: none;
 }
+
+
+/**************
+	cartt
+**************/
+#cart table{width: 100%; border: 1px solid gray}
+#cart table th{border-bottom: 1px solid gray;border-right: 1px solid gray; text-align: center;padding: 5px}
+#cart table td{border-bottom: 1px solid gray;border-right: 1px solid gray;padding: 5px}

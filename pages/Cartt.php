@@ -90,28 +90,27 @@ if ($ok==2) {
             </thead>
             <tbody>
             <?php
-             foreach ($_SESSION["shopping_cart"]as $key => $value) {
-              $item[]=$key;
-            }
-            print_r($item);
-            $str=implode(",", $item);
-            print_r($str);
-             $total=0;
-            $query = "SELECT `User_course` ,`Course_Name`, `Teacher_name`, `Price`, `Images`  FROM course INNER JOIN teacher ON course.User_teacher=teacher.User_teacher WHERE User_course IN ($str)";
-            $rs_name = $conn->query($query); 
-            while ($row=mysqli_fetch_array($rs_name)) {
-            ?>
-             <tr>
-               <td><?php echo $row["Course_Name"];?></td>
-               <td><?php echo $row["Teacher_name"]; ?></td>
-               <td><img  style="width: 7em;height: 7em" src="../images/<?php  echo $row["Images"];?>"></td>
-               <td><?php echo number_format($row["Price"],3).'đ';?></td>
-               <td><?php echo number_format($_SESSION["shopping_cart"][$row["User_course"]]* $row["Price"],3).'đ'; ?></td>
-              <td><a href="delete_cart.php?User_course=<?php echo $row["User_course"]?>"><img src="../images/xoa.jpg" style="width: 2em;height: 2em;"></a></td>  
-             </tr>
-            <?php
-            $total=$total+($row["Price"]);  
-            }
+             $total =0;
+              $User_courses = implode("','", $_SESSION["shopping_cart"]);
+             // foreach ($_SESSION["shopping_cart"] as $value) {
+              //  $query = "SELECT `User_course` ,`Course_Name`, `Teacher_name`, `Price`, `Images`  FROM course INNER JOIN teacher ON course.User_teacher=teacher.User_teacher WHERE `User_course` = $value ";
+              //}
+               $query = "SELECT `User_course` ,`Course_Name`, `Teacher_name`, `Price`, `Images`  FROM course INNER JOIN teacher ON course.User_teacher=teacher.User_teacher WHERE User_course IN ( '$User_courses ')";
+              $rs_name = $conn->query($query); 
+              while ($row=mysqli_fetch_array($rs_name)) {
+              ?>
+                   <tr>
+                    <td><?php echo $row["Course_Name"];?></td>
+                  <td><?php echo $row["Teacher_name"]; ?></td>
+                    <td><img  style="width: 7em;height: 7em" src="../images/<?php  echo $row["Images"];?>"></td>
+                  <td><?php echo number_format($row["Price"],3).'đ';?></td>
+                  <td><?php echo number_format( $row["Price"],3).'đ'; ?></td>
+                  <td><a href="delete_cart.php?User_course=<?php echo $row["User_course"]?>"><img src="../images/xoa.jpg" style="width: 2em;height: 2em;"></a></td>  
+                  </tr>
+              <?php
+               
+                 $total=$total + ($row["Price"]);  
+               }
             ?> 
 
             <tr>

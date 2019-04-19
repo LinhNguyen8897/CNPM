@@ -2,16 +2,7 @@
 
 require '../ADMIN/pages/config.php';
 session_start();
-$User_course=$_POST['User_course'];
-if(isset($_SESSION["shopping_cart"][$User_course]))
-{
-  $sql=$_SESSION["shopping_cart"][$User_course]+1;
-
+$user_course = $_POST['User_course'];
+if (!in_array($user_course, $_SESSION["shopping_cart"])) {
+	$_SESSION["shopping_cart"][] = $_POST['User_course'];
 }
-else {
-  $sql=1;
-}
-$_SESSION["shopping_cart"][$User_course]=$sql;
-
-?>
-

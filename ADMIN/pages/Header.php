@@ -219,7 +219,7 @@
                                 <a href="#"><i class="fa fa-envelope"></i> From liên hệ<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="blank.html">Blank Page</a>
+                                        <a href="../pages/gui_mail.php">Gửi mail</a>
                                     </li>
                                     <li>
                                         <a href="login.html">Login Page</a>

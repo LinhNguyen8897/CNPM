@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Trang chủ hệ thống</title>
+     <script type="text/javascript" src="../js/jquery.js"></script>
    <script type="text/javascript" src="../js/2.js"></script>
    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">

@@ -34,14 +34,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-9" style="margin-top: 15px">
-                    <h4 style="font-size: 20px; font-family: sans-serif;margin-bottom: 13px; ">  Tổng hợp khóa học : Lập trình</h4>
+                    <h4 style="font-size: 20px; font-family: sans-serif;margin-bottom: 13px; ">  Tổng hợp khóa học : Thiết kế</h4>
                       <div class="sanpham">
                         <?php
                              $s=0.1;
                              require '../ADMIN/pages/config.php';
                              $result=mysqli_query($conn,"SELECT User_course ,Course_Name, Teacher_name, Price, Images , Teacher_image
-                              FROM   teacher INNER JOIN course  ON course.User_teacher=teacher.User_teacher 
-                              INNER JOIN typeofcourse on teacher.User_TypeOfCourse=typeofcourse.User_TypeOfCourse WHERE typeofcourse.User_TypeOfCourse='T02' ");
+FROM   teacher INNER JOIN course  ON course.User_teacher=teacher.User_teacher 
+INNER JOIN typeofcourse on teacher.User_TypeOfCourse=typeofcourse.User_TypeOfCourse WHERE typeofcourse.User_TypeOfCourse='T01' ");
                              while($data=mysqli_fetch_assoc($result))
                              {
                             
@@ -312,15 +312,16 @@
                     <?php
                       require '../pages/sider.php'
                       ?>
+                             
                     </div><!-- siebar -->
                 </div><!-- menu1 -->
         	</div><!-- row -->
     	</div><!-- container -->
     </div><!-- phangiua -->
+
 <?php
 require 'Footer.php';
 ?>
-
 
 </body>
 </html>

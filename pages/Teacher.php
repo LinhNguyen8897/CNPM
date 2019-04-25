@@ -89,7 +89,7 @@
                         <div class="ubc-course">
                             <div class="img-ubc-course">
                                 <a href="https://unica.vn/facebook-marketing-tu-a-z">
-                                    <img class="img-responsive" src="images/6.jpg" alt="">
+                                    <img class="img-responsive" src="../images/6.jpg" alt="">
                                 </a>
                             </div><!-- img-ubc-course -->
 
@@ -142,7 +142,7 @@
                         <div class="ubc-course">
                             <div class="img-ubc-course">
                                 <a href="https://unica.vn/facebook-marketing-tu-a-z">
-                                    <img class="img-responsive" src="images/6.jpg" alt="">
+                                    <img class="img-responsive" src="../images/6.jpg" alt="">
                                 </a>
                             </div><!-- img-ubc-course -->
 

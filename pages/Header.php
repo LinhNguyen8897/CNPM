@@ -10,7 +10,7 @@ require '../ADMIN/pages/config.php';
 					
 				</div>
 				<div class="col-sm-4 col-lg-5 col-md-5 cate-sm">
-					<form name="frmsearch" class="unica-search-boxtop navbar-form form-inline" method="GET" action="../ADMIN/pages/saerch.php">
+					<form name="frmsearch" class="unica-search-boxtop navbar-form form-inline" method="GET" action="../pages/search.php">
                         <input name="key" type="text" class="form-control unica-form" placeholder="Tìm khóa học, giảng viên bạn quan tâm">
                         <button type="submit" class="btn unica-btn-search" name="ok"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </form>

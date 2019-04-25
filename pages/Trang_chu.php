@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="../css/Home.css">
 <script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/1.js"></script>
 </head>
 <body>
 
@@ -39,7 +40,7 @@ require 'Header.php';
     Khóa học cho bạn
 </h1>
 <div class="tong_khoi_gt">
-    <a href="trangcon.php">
+    <a href="../pages/Trang_con.php">
         <div class="khoi_gt">
             <img src="../images/gt3.jpg" alt="" class="wow bounceInUp" data-wow-delay="0.1s">
             <div class="nenkhoi"></div>
@@ -48,7 +49,7 @@ require 'Header.php';
     </div>
     <!-- end khoi_gt -->
     <div class="khoi_gt">
-        <a href="trangcon.php">
+        <a href="../pages/trang_con1.php">
         <img src="../images/gt1 (1).png" alt="" class="wow bounceInUp" data-wow-delay="0.2s">
         <div class="nenkhoi"></div>
         <div class="nd_khoi">tiếng anh</div>
@@ -56,7 +57,7 @@ require 'Header.php';
     </div>
     <!-- end khoi_gt -->
     <div class="khoi_gt">
-        <a href="trangcon.php">
+        <a href="../pages/trang_con2.php">
         <img src="../images/gt1 (2).png" alt="" class="wow bounceInUp" data-wow-delay="0.3s">
         <div class="nenkhoi"></div>
         <div class="nd_khoi">kỹ năng</div>
@@ -64,7 +65,7 @@ require 'Header.php';
     </div>
     <!-- end khoi_gt -->
     <div class="khoi_gt">
-        <a href="trangcon.php">
+        <a href="../pages/trang_con3.php">
         <img src="../images/gt4.png" alt="" class="wow bounceInUp" data-wow-delay="0.4s">
         <div class="nenkhoi"></div>
         <div class="nd_khoi">Thiết kế</div>
@@ -156,6 +157,7 @@ require 'Header.php';
    {
   
     ?>
+    <a href="../pages/Ct_Khoahoc.php">
     <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="$s" >
           <img src="../images/<?php echo $data['Images'];?>" class="anh_sp anh<?php echo $data['User_course'];?>">
           <div class="nen-sp" >
@@ -191,7 +193,8 @@ require 'Header.php';
                   <span class="price-sale" style="margin-left: 6em"><?php echo number_format($data['Price'],3).'đ';?></span>
               </div>
           </div>
-      </div><!-- khoi_sp -->     
+      </div><!-- khoi_sp --> 
+      </a>    
       <script type="text/javascript">
         $(document).ready(function(){
           $("a#addcart<?php echo $data['User_course'];?>").click(function(){
@@ -271,6 +274,7 @@ require 'Header.php';
  <div class="row">
      <div class="u-top-teacher">
          <h4>GIẢNG VIÊN TIÊU BIỂU</h4>
+
          <div class="box-teacher slick-initialized slick-slider">
             <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" >Previous</button>
                      <?php
@@ -278,6 +282,7 @@ require 'Header.php';
                $result=mysqli_query($conn,"SELECT `User_teacher`, `Teacher_name`, `Teacher_image`, `Name_TypeOfCourse` FROM teacher INNER JOIN typeofcourse ON teacher.User_TypeOfCourse=typeofcourse.User_TypeOfCourse order by User_teacher desc limit 4");
                while($data=mysqli_fetch_assoc($result))
                {
+                echo " <a href='../pages/Teacher.php'>";
                 echo"<div class='slick-list draggable'  aria-live='polite'>";
                     echo" <div class='slick-track' style='opacity: 1; width: 4275px; left: -1140px;' role='listbox'>";
                           echo"<div class='nner-box-teacher slick-slide slick-cloned' data-slick-index='-4' aria-hidden='true' style='width: 269px;margin: 0 0.5em' tabindex='-1'>";
@@ -292,6 +297,7 @@ require 'Header.php';
                     echo"</div>";
                             //<!-- slick-track -->
                 echo"</div>";
+                echo "</a>";
                     //<!-- slick-list draggable -->
                }
             ?>
@@ -365,5 +371,7 @@ footer
 <?php
 require 'Footer.php';
 ?>
+
+
 </body>
 </html>

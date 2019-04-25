@@ -179,6 +179,18 @@
                                 <!-- /.nav-second-level -->
                             </li>
                              <li>
+                                <a href="#"><i class="fa fa-files-o "></i> Bài viết<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="../pages/List_Course.php">Thêm mới</a>
+                                    </li>
+                                    <li>
+                                        <a href="../pages/DanhSachBV.php">Danh sách</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                             <li>
                                 <a href="#"><i class="fa fa-user-plus"></i> Thành viên<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>

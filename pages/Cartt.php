@@ -140,7 +140,7 @@ else {
       <div class="price-cart-1">$ <?php echo number_format($total, 3).'đ'; ?></div>
   </div><!-- price-cart-box clearfix -->
   <div class="price-btn-box">
-      <a href="/order/step1" style="text-decoration: none;">Thanh toán</a>
+      <a href="../pages/Dat_hang.php" style="text-decoration: none;">Thanh toán</a>
   </div><!-- price-btn-box -->
 </div><!-- u-cart-price -->
 </div><!-- col-lg-3 col-md-3 col-sm-4 -->

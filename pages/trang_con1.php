@@ -34,18 +34,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-9" style="margin-top: 15px">
-                    <h4 style="font-size: 20px; font-family: sans-serif;margin-bottom: 13px; ">  Tổng hợp khóa học : Lập trình</h4>
+                    <h4 style="font-size: 20px; font-family: sans-serif;margin-bottom: 13px; ">  Tổng hợp khóa học : Tiếng anh</h4>
                       <div class="sanpham">
                         <?php
                              $s=0.1;
                              require '../ADMIN/pages/config.php';
                              $result=mysqli_query($conn,"SELECT User_course ,Course_Name, Teacher_name, Price, Images , Teacher_image
                               FROM   teacher INNER JOIN course  ON course.User_teacher=teacher.User_teacher 
-                              INNER JOIN typeofcourse on teacher.User_TypeOfCourse=typeofcourse.User_TypeOfCourse WHERE typeofcourse.User_TypeOfCourse='T02' ");
+                              INNER JOIN typeofcourse on teacher.User_TypeOfCourse=typeofcourse.User_TypeOfCourse WHERE typeofcourse.User_TypeOfCourse='T01'");
                              while($data=mysqli_fetch_assoc($result))
                              {
                             
                               ?>
+                              <a href="../pages/Ct_Khoahoc.php">
                               <div class="khoi_sp kinang  wow zoomIn" data-wow-delay="$s" >
                                     <img src="../images/<?php echo $data['Images'];?>" class="anh_sp anh<?php echo $data['User_course'];?>">
                                     <div class="nen-sp" >
@@ -81,7 +82,8 @@
                                             <span class="price-sale" style="margin-left: 6em"><?php echo number_format($data['Price'],3).'đ';?></span>
                                         </div>
                                     </div>
-                                </div><!-- khoi_sp -->     
+                                </div><!-- khoi_sp -->   
+                                </a>  
                                 <script type="text/javascript">
                                   $(document).ready(function(){
                                     $("a#addcart<?php echo $data['User_course'];?>").click(function(){
@@ -312,15 +314,14 @@
                     <?php
                       require '../pages/sider.php'
                       ?>
-                    </div><!-- siebar -->
                 </div><!-- menu1 -->
         	</div><!-- row -->
     	</div><!-- container -->
     </div><!-- phangiua -->
+
 <?php
 require 'Footer.php';
 ?>
-
 
 </body>
 </html>

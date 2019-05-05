@@ -39,11 +39,11 @@ require '../pages/config.php';
         if (isset($_POST['submit'])) 
         {
             
-            $hoten="Linh";
-            $diachi="Nghệ An";
-            $dienthoai="0969298340";
-            $Email="nguyenmylinh@gmail.com";
-            $noidung="Chào mừng bạn đã đăng ký đơn hàng thành công";
+            $hoten=$_POST['hoten'];
+            $diachi=$_POST['diachi'];
+            $dienthoai=$_POST['dienthoai'];
+            $Email=$_POST['Email'];
+            $noidung=$_POST['noidung'];
             $noidung_lh='<p><h3><strong>Thông tin liên hệ</strong></h3></p>
                         <p>Họ tên:'.$hoten.'</p>
                         <p>Địa chỉ:'.$diachi.'</p>

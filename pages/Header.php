@@ -42,8 +42,8 @@ require '../ADMIN/pages/config.php';
 						<!-- <span class="unica-sl-cart"><b>0</b></span> -->
 					</a>
 					<ul class="unica-acc-zone">
-                            <li><a class="unica-reg-acc" href="/register">Đăng ký</a></li>
-                            <li><a class="unica-log-acc" href="/login">Đăng nhập</a></li>
+                            <li><a class="unica-reg-acc" href="../pages/register.php">Đăng ký</a></li>
+                            <li><a class="unica-log-acc" href="../pages/login.php">Đăng nhập</a></li>
                         </ul>
 				</div>
 			</div><!-- row -->

@@ -65,7 +65,7 @@ require 'Header.php';
                                                     echo"Lỗi kết nối tới cơ sở dữ liệu";
                                                 }
 
-                                                $result="select * from course";
+                                                $result="SELECT `User_course`, `User_teacher`, `User_Sale`, `User_Activated`, `Course_Name`, `Nd_baiviet`, `Price`, `Images`, `Document` FROM course";
                                                $rs_name = $conn->query($result);                                          
                                                 while ($row = mysqli_fetch_assoc($rs_name))
                                                 {
@@ -76,11 +76,13 @@ require 'Header.php';
                                                   echo"<td>".$row['User_Activated']."</td>";
                                                   echo"<td>".$row['Course_Name']."</td>";
                                                   echo"<td>".$row['Price']."</td>";
-                                                  echo"<td>".$row['Images']."</td>";
+                                                  ?>
+                                                  <td><img style="width: 7em;height: 7em" src="../../images/<?php  echo $row["Images"];?>"></td>
+                                                  <?php
                                                   echo"<td>".$row['Document']."</td>";
                                                   echo"<td><a href='Edit_Course.php?User_course=$row[User_course]'>Edit</a></td>";
                                                   echo"<th><a href='Delete_Course.php?User_course=$row[User_course] 'onclick='return show_confirm();' sle='color:#f3f;'>Delete</a></th>";
-                                                  echo"<th><a href='Delete_Course.php?User_course=$row[User_course] 'onclick='return show_confirm();' sle='color:#f3f;'>Add to cart</a></th>";         
+                                                       
                                                   echo"</tr>";                                 
                                                 }
                                                 mysqli_close($conn);  

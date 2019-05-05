@@ -40,8 +40,8 @@
                              $s=0.1;
                              require '../ADMIN/pages/config.php';
                              $result=mysqli_query($conn,"SELECT User_course ,Course_Name, Teacher_name, Price, Images , Teacher_image
-FROM   teacher INNER JOIN course  ON course.User_teacher=teacher.User_teacher 
-INNER JOIN typeofcourse on teacher.User_TypeOfCourse=typeofcourse.User_TypeOfCourse WHERE typeofcourse.User_TypeOfCourse='T01' ");
+                              FROM   teacher INNER JOIN course  ON course.User_teacher=teacher.User_teacher 
+                              INNER JOIN typeofcourse on teacher.User_TypeOfCourse=typeofcourse.User_TypeOfCourse WHERE typeofcourse.User_TypeOfCourse='T04' ");
                              while($data=mysqli_fetch_assoc($result))
                              {
                             

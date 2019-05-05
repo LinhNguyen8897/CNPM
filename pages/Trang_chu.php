@@ -133,13 +133,13 @@ require 'Header.php';
             <a href="" data-danhmuc="all">Tất cả</a>
         </li>
         <li>
-            <a href="" data-danhmuc=".laptrinh">Lập trình</a>
+            <a href="../pages/Trang_con.php" data-danhmuc=".laptrinh">Lập trình</a>
         </li>
         <li>
-            <a href="" data-danhmuc=".tienganh">Tiếng anh</a>
+            <a href="../pages/trang_con1.php" data-danhmuc=".tienganh">Tiếng anh</a>
         </li>
         <li>
-            <a href="" data-danhmuc=".kinang">Kỹ năng</a>
+            <a href="../pages/trang_con2.php" data-danhmuc=".kinang">Kỹ năng</a>
         </li>
         <li>
             <a href="" data-danhmuc=".thietke">Thiết kế</a>

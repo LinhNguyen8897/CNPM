@@ -70,7 +70,9 @@ require 'Header.php';
                                                   echo"<td>".$row['User_TypeOfCourse']."</td>";
                                                   echo"<td>".$row['Teacher_name']."</td>";
                                                   echo"<td>".$row['Email']."</td>";
-                                                  echo"<td>".$row['Teacher_image']."</td>";
+                                                   ?>
+                                                  <td><img style="width: 7em;height: 7em" src="../../images/<?php  echo $row["Teacher_image"];?>"></td>
+                                                  <?php
                                                   echo"<td>".$row['Describee']."</td>";
                                                   echo"<td>".$row['User_level']."</td>";
                                                   echo"<td><a href='Edit_Teacher.php?User_teacher=$row[User_teacher]'>Edit</a></td>";

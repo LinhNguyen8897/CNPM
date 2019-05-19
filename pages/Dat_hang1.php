@@ -41,117 +41,10 @@ main
 
 <!-- BLOCK -->
 <?php
-$loi=array();
-$loi["txtName"]=$loi["txtEmail"]=$loi["txtMobile"]=$loi["city"]=NULL;
-$txtName=$txtEmail=$txtMobile=$city=NULL;
-if (isset($_POST['ok'])) {
-    $txtName = $_POST['txtName'];
-    $txtEmail = $_POST['txtEmail'];
-    $txtMobile = $_POST['txtMobile'];
-    $city =  $_POST['city'];
-     if (empty($_POST["txtName"])) 
-     {
-         $loi["txtName"]= "vui long nhap ten ";
-     }
-     else {
-        $txtName=$_POST["txtName"];
-    }
-    if (empty($_POST["txtEmail"])) 
-     {
-         $loi["txtEmail"]= "vui long nhap email";
-     }
-     else {
-        $txtEmail=$_POST["txtEmail"];
-    }
-    if (empty($_POST["txtMobile"])) 
-     {
-         $loi["txtMobile"]= "vui long nhap sdt";
-     }
-     else {
-        $txtMobile=$_POST["txtMobile"];
-    }
-    if (empty($_POST["city"])) 
-     {
-         $loi["city"]= "vui long nhap thanh pho";
-     }
-     else {
-        $city=$_POST["city"];
-    }
-    $sql="INSERT INTO `bill`(`User_bill`, `User_course`, `Ten_KH`, `Email`, `SDT`, `Dia_chi`, `Total_money`) VALUES ('1' , 'TC01','".$txtName."','".$txtEmail."','".$txtMobile."','".$city."',  )";
-    $stmt  = $conn->query($sql);
-    // var_dump($stmt);
-    // printf($sql);
-}
+
 ?>
 <main id="wrapper">
-
-<div class="block1">
-        <div class="col-sm-6 col-sm-push-3">
-            <h3 class="text-center">Thông tin người đặt hàng</h3>
-        <form  method="POST" name="frmRegister" action="../pages/Dat_hang1.php"  style="margin-top: 4em !important">
-                <div class="form-group">
-                    <label >Họ tên*</label>
-                    <input required="" type="text"  placeholder="Họ và tên" name="txtName" class="form-control">
-                 </div><!-- line-input  -->
-                <div class="form-group">
-                    <label >Email*</label>
-                    <input required="" type="email"  name="txtEmail"  placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label >Điện thoại*</label>
-                    <input required="" type="text"  name="txtMobile"  placeholder="Số điện thoại" class="form-control">
-                </div>                           
-                <div class="form-group">
-                    <label for="inputEmail">Tỉnh/Thành phố* </label>
-                    <select name="city" class="province_id form-control">
-                        <option value="18">Hà Nội</option>
-                        <option value="52">Hồ Chí Minh</option>
-                        <option value="56">An Giang</option>
-                        <option value="19">Bắc Giang</option>
-                        <option value="6">Bắc Kạn</option>
-                        <option value="65">Bạc Liêu</option>
-                        <option value="2">Bắc Ninh</option>
-                        <option value="54">Bà Rịa - Vũng Tàu</option>
-                        <option value="60">Bến Tre</option>
-                        <option value="49">Bình Dương</option>
-                        <option value="45">Bình Phước</option>
-                        <option value="51">Bình Thuận</option>
-                        <option value="39">Bình Định</option>
-                        <option value="68">Cà Mau</option>
-                        <option value="1">Cao Bằng</option>
-                        <option value="59">Cần Thơ</option>
-                        <option value="40">Gia Lai</option>
-                        <option value="3">Hà Giang</option>
-                        <option value="25">Hà Nam</option>
-                        <option value="22">Hải Dương</option>
-                        <option value="24">Hải Phòng</option>
-                        <option value="31">Hà Tĩnh</option>
-                        <option value="63">Hậu Giang</option>
-                        <option value="23">Hòa Bình</option>
-                        <option value="8">Hưng Yên</option>
-                        <option value="43">Khánh Hòa</option>
-                        <option value="62">Kiên Giang</option>
-                        <option value="38">Kon Tum</option>
-                        <option value="4">Lai Châu</option>
-                        <option value="46">Lâm Đồng</option>
-                        <option value="14">Lạng Sơn</option>
-                        <option value="5">Lào Cai</option>
-                        <option value="53">Long An</option>
-                        <option value="28">Nam Định</option>
-                        <option value="30">Nghệ An</option>
-                        <option value="27">Ninh Bình</option>
-                        <option value="47">Ninh Thuận</option>
-                    </select>
-               </div>
-              <input type="submit" name="ok">
-               
-        </form><!-- form-inline -->
-</div>   
-</div>
-<!-- Block -->
-
-
-<!-- <div class="block1" >
+<div class="block1" >
     <div class="col-sm-6 col-sm-push-3">
       <h1>Phương thức thanh toán</h1>
         <br>
@@ -168,30 +61,30 @@ if (isset($_POST['ok'])) {
                             <i class="fa fa-home fh" aria-hidden="true"></i>Thu tiền tại nhà
                             </a>
                          </h4>
-                    </div>panel-heading -->
-                   <!--  <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+                    </div><!-- panel-heading -->
+                    <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
                          <div class="panel-body">
                             <div class="form-group">
                                <input value="" type="text" name="address" class="form-control" placeholder="Vui lòng nhập địa chỉ chính xác của quý khách">
                                 <br>
                                 <button name="pay_cod" type="submit" 
                                 class="btn btn-success btn-cl-or" style="margin-top: -20px  !important;">Hoàn tất</button>
-                            </div> form-group -->
-                          <!--   <span class="district_shiping">Phí giao hàng : Miễn phí
+                            </div><!-- form-group -->
+                            <span class="district_shiping">Phí giao hàng : Miễn phí
                             <span class="price_shipping">(Miễn phí với đơn hàng trên 200,000đ)</span>
-                            </span> -->
-                         <!-- </div --><!-- panel-body -->
-                    <!-- </div --><!-- panel-collapse collapse -->
-                <!-- </div> --><!-- panel panel-default -->
-               <!--  <div class="panel panel-default" pay-type="atm_panel">
+                            </span>
+                         </div><!-- panel-body -->
+                    </div><!-- panel-collapse collapse -->
+                </div><!-- panel panel-default -->
+                <div class="panel panel-default" pay-type="atm_panel">
                       <div class="panel-heading">
                          <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed" style="text-decoration: none;">
                             <i class="fa fa-credit-card-alt" aria-hidden="true"></i> Thẻ ATM, Internet Banking
                             </a>
                          </h4>
-                      </div> --><!-- panel-heading -->
-                    <!--   <div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
+                      </div><!-- panel-heading -->
+                      <div id="collapseTwo" class="panel-collapse collapse" style="height: 0px;">
                          <div class="panel-body">
                             Bạn cần có tài khoản Internet Banking để tiến hành thanh toán
                             <br> Hỗ trợ tất cả các ngân hàng tại Việt Nam: VCB, ACB, Sacombank, BIDV,...
@@ -199,9 +92,9 @@ if (isset($_POST['ok'])) {
                             <br>
                             <a class=" btn-success btn-cl-or" href="/payonline/476529/atm"><span class="icon thenganhang"></span> Thanh toán ngay</a>
                          </div>
-                      </div> -->
-                <!-- </div> --><!-- panel panel-default -->
-                <!-- <div class="panel panel-default" pay-type="bank-panel">
+                      </div>
+                </div><!-- panel panel-default -->
+                <div class="panel panel-default" pay-type="bank-panel">
 
             </div>
             <div class="panel-heading" style="background: #80808012">
@@ -213,8 +106,8 @@ if (isset($_POST['ok'])) {
               </div>
               <div id="collapseFive" class="panel-collapse collapse">
                  <div class="panel-body">
-                    <ul class="list-group"> -->
-               <!--         <li style="background-color: #fff !important;" class="list-group-item">
+                    <ul class="list-group">
+                       <li style="background-color: #fff !important;" class="list-group-item">
                           <div class="row">
                              <div class="col-md-2">Tên tài khoản</div>
                              <div class="col-md-10">Công ty Cổ phần đào tạo trực tuyến </div>
@@ -231,9 +124,9 @@ if (isset($_POST['ok'])) {
                                 Ngay sau khi nhận được thanh toán, Unica sẽ gửi mail kích hoạt để bạn có thể học ngay.
                              </div>
                           </div>
-                       </li> -->
+                       </li>
 
-                     <!--   <li style="background-color: #fff !important;" class="list-group-item">
+                       <li style="background-color: #fff !important;" class="list-group-item">
                           <div class="row">
                              <div class="col-md-2"><b style="padding-left: 0">Ngân hàng</b></div>
                              <div class="col-md-6">&nbsp;</div>
@@ -268,41 +161,15 @@ if (isset($_POST['ok'])) {
                     <br>
                     <button class="btn btn-success btn-cl-or" name="pay_bank" type="submit" method="post">Hoàn tất</button>
                  </div>
-                </div> -->
+                </div>
 
                    
-          <!--   </div> --><!-- panel-group -->
-    <!--     </form> -->
-   <!--  </div> --><!-- u-box-cart3 -->
-<!--     </div>  -->
-<!-- </div> -->
+            </div><!-- panel-group -->
+        </form>
+    </div><!-- u-box-cart3 -->
+    </div> 
+</div>
 <!-- Block -->
-<!-- <div class="block1">
-   
-      <div class="unica-order-cart col-sm-6 col-sm-push-3">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <div class="cart-complete">
-                          <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                          <p>ĐĂNG KÝ THÀNH CÔNG!</p>
-                          <span>
-                          Bạn đã đăng ký thành công khoá học.<br>
-
-                          <b style="padding-left: 9.5em">Mã đơn hàng: 476529</b>
-                          <br>
-                          Bộ phận CSKH sẽ liên hệ với bạn trong 24 giờ để hoàn tất đơn hàng.
-
-                          <br><br>
-                          <div class="clearfix"></div>
-                          <a class="btn btn-success" href="trangcon.php" style="margin-left: 10.5em;"> Xem thêm khóa học khác </a>
-                          </span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div> unica-order-cart -->
-<!-- </div> -->
 
 <a  class="btn btn-primary next" name="next">Next</a>
 <a class="btn btn-danger prev" name="back">Back</a>

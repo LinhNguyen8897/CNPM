@@ -19,8 +19,10 @@
                     <div class="unica-breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Tags</a></li>
-                            <li class="breadcrumb-item active">Tiếng anh</li>
-                            <li class="breadcrumb-item active">Lập trình</li>
+                            <li class="breadcrumb-item active "><a href="../pages/trang_con1.php" style="font-size: 15px;color: gray">Tiếng anh</a></li>
+                            <li class="breadcrumb-item active"><a href="../pages/Trang_con.php" style="font-size: 15px;color: gray">Lập trình</a></li>
+                            <li class="breadcrumb-item active"><a href="../pages/trang_con2.php" style="font-size: 15px;color: gray">Kỹ năng</a></li>
+                            <li class="breadcrumb-item active"><a href="../pages/trang_con3.php" style="font-size: 15px;color: gray">Thiết kế</a></li>
                         </ol><!-- breadcrumb -->
                     </div><!-- unica-breadcrumb -->
                 </div><!-- col-lg-12 -->
@@ -115,3 +117,9 @@
             </div>
         </div>
     </div>
+   <?php
+		require 'Footer.php';
+		
+	?>
+</body>
+</html>

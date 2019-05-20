@@ -304,7 +304,7 @@ if (isset($_POST['ok'])) {
       </div> unica-order-cart -->
 <!-- </div> -->
 
-<a  class="btn btn-primary next" name="next">Next</a>
+<a  class="btn btn-primary next" name="next" href="../pages/Dat_hang1.php">Next</a>
 <a class="btn btn-danger prev" name="back">Back</a>
 
 </main>

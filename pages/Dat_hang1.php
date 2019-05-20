@@ -52,7 +52,7 @@ main
         <span style="color:red">Bạn nên thanh toán Online để được giảm 5% và vào học được ngay</span>
      
          <div class="u-box-cart3">
-        <form method="POST" action="">
+        <form method="POST" action="Dat_hang2.php">
             <div class="panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -170,8 +170,8 @@ main
     </div> 
 </div>
 <!-- Block -->
-
-<a  class="btn btn-primary next" name="next">Next</a>
+<!-- 
+<a  class="btn btn-primary next" name="next" href="../pages/Dat_hang1.php">Next</a> -->
 <a class="btn btn-danger prev" name="back">Back</a>
 
 </main>
